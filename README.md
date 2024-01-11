@@ -9,7 +9,7 @@
 
 
 > 프론트 엔드 프레임워크
->	> React
->	>	> Vue
-> > > > Angular
+>	React
+>	 Vue
+>  Angular
 
