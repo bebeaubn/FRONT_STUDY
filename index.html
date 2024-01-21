@@ -1,15 +1,675 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset = "utf-8" />
-    <title>test</title>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <!--
+<body>
+     <h1>Hello Html</h1>
 
+    <h1> 문서의 구조</h1>
+
+    <pre> 
+        1. html
+        루트 엘리먼트
+        
+        2.head
+        메타 데이터 (문서에 대한 데이터)를 작성하는 부분
+
+        1)title
+        2)description
+        3)charset
+        4)외부 소스의 링크 (css , js 파일등)
+        5)기타 메타 데이터
+
+
+        3.body
+        문서의 내용 - 실제적인 내용이 들어가는 부분 
+    </pre > 
+
+    <h1>앨리먼트</h1>
+        <pre>
+           1 개념
+           문서를 이루는 각 요소 (elment)
+           
+           2.애트리뷰트 (atribute)
+           앨리먼트의 기능을 확장시킨다
+        </pre>
+   
+<a href="http://www.gogle.com" target="_blank">gogle</a>
+
+
+</body>
+
+
+<h1> 트리구조</h1>
+<pre>
+부모, 자식, 형제 관계를 가지는 데이터 구조
+</pre>
+
+<h3>세계의 맥주</h3>
+
+<ul>
+    <li>기네시스</li>
+    <li>하이네켄</li>
+    <li>버드와이저</li>
+
+</ul> -
+
+<h1> h1 ~ h6</h1>
+<p> heading (제목)</p>
+
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>   
+
+
+<h1>p</h1>
+<p>paragrapt (문장)</p>
+
+<p>시계는 살수있지만 시간은 살수없다. </p>  
+
+<h1>a</h1>
+<p> anchor (링크)</p>
+
+<pre> 
+a의 애트리뷰트
+
+1 href (hypertext reference)
+요청주소
+
+2 target 
+새문서를 여는 방법
+
+1)_self(기본값)
+현재 탭에서 문서를 연다
+
+2)_blank
+새 탭에서 문서를 연다
+</pre>
+
+<a href="http://wwww.gogle.com" target="_blank">gogle</a> 
+
+<h1>span</h1>
+<p>문장에서 특정 부분을 선택할때 사용된다</p>
+
+<p>
+    시계는 살수있지만 <span style="font-weight: bold">시간</span>은 살수없다
+
+</p>    
+
+<h1>br</h1>
+<p>breaking rule (줄바꿈)</p>
+
+<p> 
+시계는 살수있지만 <br>
+시간은 살수없다.
+</p>
+
+<h1>Header</h1>
+<p>
+    웹페이지 최상단 부분
+    보통 로고, 슬로건,메뉴 등을 포함한다.
+</p>
+
+
+<header>
+    <h1>LOGO</h1>
+    <p>welcome to company</p>
+</header>  
+
+<h1>nav</h1>
+<p> navigation (메뉴)</p>
+
+<nav>
+    <ui>
+    <li>
+        <a href="#" >홈</a>
+    </li>
+    <li>
+        <a href="#">소개</a>
+    </li>
+    <li>
+        <a href="#">블로그</a>
+    </li>      
+    </ui>
+
+</nav> 
+
+
+<h1>main</h1>
+<p>웹 페이지의 메인 콘텐츠</p>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+     Nostrum officiis magnam quo ipsa distinctio sit eum voluptates,<br> 
+     dignissimos consequuntur minima cupiditate sequi corporis aut aliquid sed similique. 
+     Ab, porro rerum.
+</p>
+
+<h3>목록</h3>
+
+<ui>
+    <li> list item</li>
+    <li> list item</li>
+    <li> list item</li>
+
+</ui>  
+
+<h1>aside</h1>
+<p>웹 페이지의 서브 컨테츠</p>
+
+<main>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, <br>
+    earum provident? Asperiores laborum reprehenderit dolores eos dignissimos vel odit nihil eligendi,<br> 
+    incidunt temporibus recusandae iure itaque soluta doloribus! Voluptate, doloremque.
+</p>
+</main>
+
+<aside>
+    <h3>추천기사</h3>
+    <ui>
+        <li> list item</li>
+        <li> list item</li>
+        <li> list item</li>
+     </ui>   
+</aside>   
+
+<h1>section</h1>
+<p> 각 섹션, 구역</p>
+<main>
+    <section>
+        <h2>Section 1 </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             Ratione, similique beatae! Debitis iure tempora ullam praesentium accusamus nihil optio<br> 
+             mollitia recusandae neque doloremque vero fuga nostrum eos, quia reiciendis ad.
+            </p>
+    </section>
+    <section>
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos asperiores,<br> 
+            consectetur omnis recusandae earum nulla excepturi laboriosam dolores, <br>
+            at cum autem cupiditate iusto sunt possimus dolore ipsum nemo est illum!</p>
+    </section>
+
+</main>  
+
+
+<h1>ul,ol</h1>
+<pre>
+1.ul -unoredered (순서가 없는 리스트)
+2.ol- ordered list (순서가 있는 리스트)
+3.li - list item (리스트 항목)
+</pre>
+
+<h3>ul</h3>
+      <ul>
+       <li> list item</li>
+        <li> list item</li>
+        <li> list item</li>
+        </ul>
+
+  
+<h3>ol</h3>
+<ol>
+    <li> list item</li>
+    <li> list item</li>
+    <li> list item</li>
+</ol>           
+
+
+<h1>table</h1>
+<p>표 , 테이블 </p>
+ <pre>
+
+ </pre>
+
+<h3>세계의 맥주</h3>
+<table border="1">
+ <thead>
+    <tr>
+        <th>이름</th>
+        <th>원산지</th>
+        <th>판매중</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>기네스</td>
+        <td>아일랜드</td>
+        <td>아니오</td>    
+    </tr>
+    <tr>
+        <td>하이네켄</td>
+        <td>네덜란드</td>
+        <td>예</td>
+    </tr>
+    <tr>
+        <td>버드와이저</td>
+        <td>미국</td>
+        <td>예</td>
+    </tr>
+</tdoby> 
+
+<h1>div</h1>
+<p>division (구역, 부분)</p>
+
+<main>
+    <div>
+        <h3>division 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Voluptatem voluptas debitis velit culpa cum ab, deleniti quae animi reiciendis.<br> 
+            Numquam, a. Quidem atque totam corrupti! Ad distinctio quibusdam cumque quos?</p>
+    </div>
+
+    <div>
+        <h3>division 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aliquid illum, <br>
+            esse ratione unde, <br>
+            corporis voluptates odit reiciendis quae <br>
+            pariatur nulla eius omnis dolores tenetur? Maxime illo repudiandae architecto facere?</p>
+    </div>
+
+    <div>
+        <h3>division 3</h3>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero aspernatur accusamus placeat,<br> 
+            dolorem impedit perferendis culpa ipsum, itaque fugiat, <br>
+            repellat commodi ea at praesentium nemo reiciendis ipsam nulla sint voluptate.
+        </p>
+    </div>
+</main>  
+
+
+<h1>footer</h1>
+<pre>
+    웹페이지의 최하단 부분
+    저작권 정보, 개인정보처리방침, 이용약관, 참조 링크 등을 포함한다
+
+</pre>
+
+<footer>
+    <small>2024 &copy : company</small>
+    
+    <p>
+        <a href="#">개인정보처리방침</a>
+    </p>
+
+    <P>
+        <a href="#">Facebook</a>
+        <a href="#">Youtube</a>
+        <a href="#">Instagram</a>
+    </P>
+</footer>  
+
+<h1>폼 (form)</h1>
+<P>서버에 제출하는 데이터를 포함한다</P>
+
+<form action="/search.php">
+    <h1>Google</h1>
+    <input type="search" name="p" placeholder="구글검색">
+    <button type="submit">검색</button>
+</form>
+<pre>
+1 form 
+클라이언트의 데이터를 서버에 전송한다
+예)로그인 폼, 가입폼, 검색폼, 컴택폼 등
+
+-애트리뷰트
+1)action : 폼을 제출할 서버상의 주소
+
+2)input 
+실제로 유저의 데이터를 입력받는다
+
+-애트리뷰트
+1)type
+수집하고자 하는 데이터에 따라 다양한 타입이 존재한다
+
+2)name
+서버가 폼 데이터를 분류하는 기준
+
+3)placeholder
+입력해야하는 데이터 예시를 보여준다
+
+4)button
+폼을 제풀하는 버튼
+
+-애트리뷰트
+1)type
+버튼의 목적  
+</pre> 
+
+<h1>CSS 길이 단위 </h1>
+
+<style>
+    body {
+        font-size: 16px;
+    }
+    
+    .px {
+        font-size: 16px;
+    }
+    .rem {
+        font-size: 1rem;
+    }
+    .em{
+        font-size: 1em;
+    }
+    .percent{
+        font-size: 100%;
+    }
+    .vw{
+        font-size: 10vw;
+    }
+    .vh {
+        font-size: 10vh;
+    }
+</style>
+    <h3>px (pixel)<h3>
+        <h3>절대값, 나머지는 상대값</h3>
+    <p class="px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>rem (root elment)</h3>
+    <p>루트 앨리먼트(html)상대적이다 1rem = 루트 앨리먼트의 폰트사이즈
+    --폰트사이즈는 브라우저의 설정에서 온다
+    --사이트 글꼴 크기에 따라서 달라진다
+    -- 픽셀을 기준으로 생각한다 
+    </p>
+    <p class="rem"></p> ipsum dolor sit amet consectetur adipisicing elit.</p>
+    
+    
+    <h3>em(element)</h3>
+    <p>부모의 상대적이다 1em = 부모의 폰트사이즈
+        -- 부모는 body 
+
+    </p>
+    <p class="em">ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>percent</h3>
+    <p>
+        --부모에 상대적이다 100% = 부모의 폰트사이즈
+        --body와 동일하다
+    </p>
+    <p class="percent">ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3> vw (viewport width)</h3>
+    <p>
+        --화면,뷰포트 넓이에 상대적이다 100vw = 뷰포트의 넓이
+        --폰트사이즈 보다 레이아웃에서 사용이 된다 
+    </p>
+    <p class="vw">ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>vh (viewport height)</h3>
+    <p>
+        --뷰포트 높이에 상대적 100vh = 뷰포트의 높이
+        --폰트사이즈 보다 레이아웃에서 사용이 된다 
+    </p>
+    <p class="vh">ipsum dolor sit amet consectetur adipisicing elit.</p> 
+
+    <h1>색상표기법</h1>
+
+    <style>
+        .name {
+            /*색상의 이름*/
+            color: red;
+        }
+
+        .rgb {
+            /*rgb (red green blue)
+            각 색상의 값은 0-255 사이의 값을 갖는다 */
+            color: rgb(255 0 0);
+        }
+
+        .rgba {
+            /*rgba (red green blue / 불투명도)
+            불투명도는 0(완전투명) ~ 1(완전불투명)
+            사이의 값을 갖는다*/
+            color: rgda(255 0 0 /0.5);
+        }
+
+        .hex {
+            /*hex(hexadecimal) 표기법
+            16진수를 사용하여 색상을 표기한다
+            0 ~ f의 16개 숫자
+            #rrggbb 순서*/
+            color: #ff0000;
+        }
+
+        .hex-3 {
+            /*hex-3 표기법
+            각 색상값이 같을때 3자리로 쓸수있다*/
+            color: #f00;
+        }
+    </style>
+
+    <ul>
+        <li class="name">list item</li>
+        <li class="rgb">lise item</li>
+        <li class="rgba">list item</li>
+        <li class="hex">list item</li>
+        <li class="hex-3">list item</li>
+    </ul> 
+
+    <h1>font size</h1>
+    <style>
+        .text-xs {
+            font-size: 0.75rem;
+        }
+
+        .text-base {
+            font-size: 1rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+    </style>
+
+
+    <h3>font size : 0.75rem</h3>
+    <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>font size : 1rem</h3>
+    <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>font size : 1.5rem</h3>
+    <p class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h1>font style</h1>
+    <style>
+    .non-italic {
+        font-style: normal;
+    }
+    .ilaic {
+        font-style: italic;
+    }
+</style>
+
+
+    <h3>font style</h3>
+    <p class="non-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>font style</h3>
+    <p class="ilaic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+
+
+    <h1>font weight</h1>
+    <p>글자의 두께 100 ~ 900 사이의 값을 가진다</p>
+
+    <style>
+        .font-thin {
+            font-weight: 100;
+        }
+
+        .font-nomal {
+            font-weight: 400;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+    </style>
+
+    <h3>font weight : 100</h3>
+    <p class="font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>font weight : 400</h3>
+    <p class="font-nomal">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>font weight : 700</h3>
+    <p class="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+
+    <h1>text align</h1>
+    <p>글자정렬</p>
+  <style>
+    .text-left {
+        text-align: left;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+
+    .text-right{
+        text-align: right;
+    }
+
+  </style>
+
+  <h3>text align : left</h3>
+  <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>text align : center</h3>
+  <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>text align : right</h3>
+  <p class="text-right"></p> 
+
+    <h1>latter spacing</h1>
+    <p>글자 간격</p>
+
+    <style>
+        .tracking-tigjtest {
+            letter-spacing: 0em;
+        }
+
+        .traking-normal {
+            letter-spacing: 0em;
+        }
+
+        .traking-widght {
+            letter-spacing: 0.1em;
+
+        }
+    </style>
+
+    
+    <h3>letter spacing</h3>
+    <p class="tracking-tigjtest">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <h3>letter spacing</h3>
+    <p class="traking-normal">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <h3>letter spcaing</h3>
+    <p class="traking-widght">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>  
+
+
+    <h1>line height</h1>
+    <p>줄 높이, 줄 간격</p>
+
+    <style>
+        .text-center{
+               text-align: center; 
+        }
+
+        .tracking-widest {
+            letter-spacing: 0.1em;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+
+        .leading-relaxed {
+            line-height: 1.625em;
+        }
+        /*
+        line-height에서 em단위를 쓰는경우
+        해당 앨리먼트의 폰트사이즈에 상대적이다*/
+        
+    </style>
+
+    
+    <h1>Q.Typography</h1>
+    <p class ="text-center tracking-widest">macntosh intoduce</p>
 
     <body>
-	html문서작성 연습 다시 재전송 해보겠습니다
-    </body>
+    <p class="text-center leading-relaxed">
+         ipsum dolor sit amet consectetur, adipisicing elit.<br>
+         Molestiae dolore porro debitis deserunt! Necessitatibus, <br>
+         error vel soluta perspiciatis consequatur deleniti ut laudantium, quisquam neque tempora,<br> 
+         tenetur rem labore et? Optio?</p>
 
+         
+         <footer>
+            <p class="text-center italic">january 24, 1984 by Apple lnc.</p>
+        </footer>  -->
 
+        <!-- 1월 19일 수업자료
+
+        
+    </body>-->
+    <h1> fllex-basis</h1>
+    <pre>
+    아이템의 크기
+    </pre>
+
+    <style>
+        .container {
+            border : 1px solid;
+        }
+
+        .flex{
+            display: flex;
+        }
+
+        .flex-row{
+            flex-direction: column;
+        }
+
+        .flex-col{
+            flex-direction: column;
+        }
+
+        .item{
+            background-color: #ddd;
+            padding: 0.5rem;
+            flex-basis: 100px;
+        }
+    </style>
+
+    <h3> flex derection : row</h3>
+    <div class="container flex flex-row">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+    </div>
+
+    <h3>flex direction : colunmn</h3>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+</body>
 </html>
-
