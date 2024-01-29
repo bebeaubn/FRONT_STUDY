@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 예제</title>
+</head>
+<body>
+
+  <!-- <h1>파일 업로드 버튼</h1>
+
+  <style>
+    #file-input {
+      display: none;
+    }
+
+    .btn {
+      /* border: 1px dashed; */
+      /* 아이템에 필요한 만큼만 넓이를 갖는다. 나머지는 flex와 동일 */
+      display: inline-flex;
+      padding: 0.5rem 0.75rem;
+      /* semi-bold */
+      font-weight: 600;
+      border: 2px solid #0bf;
+      color: #0bf;
+      /* 손가락 모양 커서 */
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 1.5rem;
+    }
+  </style>
+
+  <input type="file" id="file-input" name="">
+
+  <label for="file-input" class="btn">
+    <svg 
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 640 512"
+    >
+      <path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"/>
+    </svg>
+    <span class="text">
+      Choose File(s)
+    </span>
+  </label> -->
+
+
+  <!-- <h1>풀사이즈 버튼</h1>
+
+  <style>
+    .btn {
+      /* 부모 기준 */
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #888;
+      /* 투명 */
+      background-color: transparent;
+      color: #888;
+      display: flex;
+      /* 텍스트와 아이콘을 가운데에 위치시킨다 */
+      justify-content: center;
+      /* 
+        모서리를 둥글게 처리 
+        * 원을 만드는데 필요한 기본값 이상을 적용할 경우 계산할 필요가 없다
+      */
+      border-radius: 99px;
+      /* 손가락 모양 커서 */
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 1rem;
+      /* 텍스트와 아이콘 사이의 거리 */
+      margin-left: 0.5rem;
+      /* svg에서 배경색 속성 */
+      fill: #888;
+    }
+
+    /* 버튼에 호버했을 때 배경색 변화 */
+    .btn:hover {
+      background-color: #eee;
+    }
+  </style>
+
+  <button class="btn">
+    <span>Show more</span>
+    <svg 
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 448 512"
+    >
+      <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+    </svg>
+  </button> -->
+
+
+  <!-- <h1>Dropdown</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      display: inline-block;
+    }
+
+    .btn {
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .content {
+      /* li 앞에 점 제거 */
+      list-style: none;
+      /* 의도하지 않은 속성 제거 */
+      padding: 0;
+      margin: 0;
+      width: 12rem;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      /* 떠있는 형태 */
+      position: absolute;
+      /* 컨텐츠를 숨긴다 */
+      display: none;
+    }
+
+    /* 버튼에 호버했을 때 컨텐츠를 나타나게 한다 */
+    .container:hover .content {
+      display: block;
+    }
+
+    .link {
+      display: block;
+      padding: 0.5rem;
+      color: #000;
+    }
+
+    .link:hover {
+      background-color: #eee;
+    }
+  </style>
+
+  <div class="container">
+    <button class="btn">Dropdown</button>
+    <ul class="content">
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </div>
+
+  <p>...</p> -->
+
+
+  <!-- <h1>dropdown select</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      width: 12rem;
+    }
+
+    .btn {
+      width: 100%;
+      border: 1px solid #888;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background-color: transparent;
+      /* 버튼과 아이콘을 양쪽 모서리로 이동시킨다 */
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .content {
+      border: 1px solid #888;
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      /* 처음에 안보이는 상태 */
+      display: none;
+    }
+
+    /* 버튼에 호버했을 때 컨텐츠를 나타나게 한다 */
+    .container:hover .content {
+      display: block;
+    }
+
+    .content li {
+      padding: 0.5rem;
+    }
+
+    .content li:hover {
+      background-color: #eee;
+    }
+
+    .icon {
+      width: 0.75rem;
+    }
+  </style>
+
+  <div class="container">
+    <button class="btn">
+      <span>Car Manufacturer</span>
+      <svg 
+        class="icon"
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 320 512"
+      >
+        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
+      </svg>
+    </button>
+    <ul class="content">
+      <li>Volvo</li>
+      <li>Hyundai</li>
+      <li>Toyota</li>
+    </ul>
+  </div> -->
+
+
+  <!-- <h1>필터 버튼</h1>
+
+  <style>
+    nav {
+      /* border: 1px dashed; */
+      width: 24rem;
+      /* 아이템을 감싸지 않는다 */
+      white-space: nowrap;
+      /* 
+        overflow-x
+        x축 오버플로만 처리한다
+      */
+      overflow-x: auto;
+    }
+
+    .btn {
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      border-radius: 99px;
+      font-size: 1rem;
+    }
+
+    /* 크롬, 사파리, 오페라에서 스크롤바 숨기기 */
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* IE, 엣지, 파이어폭스에서 스크롤바 숨기기 */
+    nav {
+      -ms-overflow-style: none;  /* IE, 엣지 */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+
+  <nav>
+    <button class="btn">London</button>
+    <button class="btn">New York</button>
+    <button class="btn">Amsterdam</button>
+    <button class="btn">Rome</button>
+    <button class="btn">Seoul</button>
+    <button class="btn">Tokyo</button>
+  </nav> -->
+
+
+  <!-- <h1>알림 뱃지</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      display: inline-block;
+      position: relative;
+    }
+
+    .icon {
+      width: 2rem;
+      fill: #333;
+    }
+
+    .badge {
+      background-color: #f00;
+      width: 0.75rem;
+      height: 0.75rem;
+      display: block;
+      border-radius: 99px;
+      position: absolute;
+      right: -0.25rem;
+      border: 2px solid #fff;
+    }
+  </style>
+
+  <div class="container">
+    <span class="badge"></span>
+    <svg 
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 448 512"
+    >
+      <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+    </svg>
+  </div> -->
+
+
+  <!-- <h1>닫기 버튼</h1>
+
+  <style>
+    .container {
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    .close-btn {
+      font-size: 1.5rem;
+      position: absolute;
+      right: 0;
+      padding: 0.25rem 0.5rem;
+    }
+  </style>
+
+  <div class="container">
+    <span class="close-btn">&times;</span>
+    <h3>Message for you!</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+    </p>
+  </div> -->
+
+
+  <!-- <h1>토글 스위치</h1>
+
+  <style>
+    #checkbox {
+      display: none;
+    }
+
+    .switch {
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      background-color: #ddd;
+      padding: 4px;
+      border-radius: 14px;
+      /* 
+        애니메이션 효과 
+        
+        transition: 적용할 속성 / 속성이 변하는데 걸리는 시간
+      */
+      transition: background-color 0.5s;
+    }
+
+    /* 
+      가상클래스 checked - 체크박스나 라디오버튼이 체크된 상태
+
+      엘리먼트 1 + 엘리먼트 2 - 엘리먼트 1 바로 아래의 엘리먼트 2를 선택한다
+    */
+    #checkbox:checked + .switch {
+      background-color: #333;
+    }
+
+    .head {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      /* 애니메이션 효과 */
+      transition: transform 0.5s;
+    }
+
+    #checkbox:checked + .switch .head {
+      transform: translateX(20px);
+    }
+  </style>
+
+  <input type="checkbox" name="" id="checkbox">
+  <label for="checkbox" class="switch">
+    <div class="head"></div>
+  </label> -->
+
+  <!-- <style>
+    .container {
+      /* border: 1px dashed; */
+      width: 50px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .item {
+      width: inherit;
+      height: 5px;
+      background-color: #000;
+      /* 애니메이션 효과 */
+      transition: transform 0.2s;
+    }
+
+    .container:hover .top {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    .container:hover .bottom {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  </style>
+
+  <h1>움직이는 메뉴버튼</h1>
+
+  <div class="container">
+    <div class="item top"></div>
+    <div class="item bottom"></div>
+  </div> -->
+
+  <!-- <style>
+    body {
+      /* 
+        calc 함수
+        값을 계산할 수 있다
+      */
+      height: calc(100vh + 100px);
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* fixed에서 %는 뷰포트 기준 */
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #333;
+    }
+
+    .link {
+      display: block;
+      padding: 0.75rem;
+      color: #fff;
+      /* 밑줄 제거 */
+      text-decoration: none;
+    }
+
+    .link:hover {
+      background-color: #222;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+  </style>
+
+  <nav class="navbar">
+    <ul>
+      <li>
+        <a href="#" class="link">Home</a>
+      </li>
+      <li>
+        <a href="#" class="link">About</a>
+      </li>
+      <li>
+        <a href="#" class="link">Blog</a>
+      </li>
+      <li>
+        <a href="#" class="link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>NavBar</h1>
+    <p>...</p>
+  </main> -->
+
+
+  <!-- <style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list {
+      display: flex;
+      background-color: #333;
+    }
+
+    .menu-link {
+      display: block;
+      padding: 0.75rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu-link:hover {
+      background-color: #222;
+    }
+
+    .drop-btn {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+
+    .drop-btn:hover {
+      background-color: #222;
+    }
+
+    .drop-content {
+      width: 12rem;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      position: absolute;
+      display: none;
+    }
+
+    .drop-container:hover .drop-content {
+      display: block;
+    }
+
+    .drop-link {
+      display: block;
+      color: #000;
+      padding: 0.5rem;
+    }
+
+    .drop-link:hover {
+      background-color: #eee;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+  </style>
+
+  <nav class="navbar">
+    <ul class="menu-list">
+      <li>
+        <a href="#" class="menu-link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="menu-link">Link</a>
+      </li>
+      <li>
+        <div class="drop-container">
+          <button class="drop-btn">Dropdown</button>
+          <ul class="drop-content">
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>NavBar with Sub Menu</h1>
+  </main> -->
+
+
+  <!-- <style>
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      margin: 0;
+    }
+
+    .btn {
+      /* fixed부모를 기준으로 위치할 수 있다 */
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 0 1rem;
+      font-size: 2rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <header>
+    <button class="btn">&#9776;</button>
+    <h3 class="logo">COMPANY</h3>
+  </header> -->
+
+  <!-- <style>
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn {
+      height: 100%;
+      padding: 0 1rem;
+      background-color: #000;
+      color: #fff;
+      font-size: 2rem;
+      border: none;
+    }
+
+    .logo {
+      margin: 0;
+      margin-left: 1rem;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      color: #000;
+      padding: 0 1rem;
+    }
+  </style>
+
+  <header>
+    <div class="container">
+      <button class="btn">&#9776;</button>
+      <h3 class="logo">COMPANY</h3>
+    </div>
+    <a href="#" class="link">Accounts</a>
+  </header> -->
+
+  <!-- <style>
+    body {
+      height: calc(100vh + 100px);
+    }
+
+    .side-bar {
+      width: 16rem;
+      height: 100%;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .logo {
+      color: #fff;
+      padding: 0 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .link {
+      display: block;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    .link:hover {
+      background-color: #222;
+    }
+
+    main {
+      margin-top: 4rem;
+      margin-left: 16rem;
+    }
+  </style>
+
+  <nav class="side-bar">
+    <h1 class="logo">LOGO</h1>
+    <ul>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>Side Bar</h1>
+    <p>..</p>
+  </main> -->
+
+
+  <!-- <style>
+    body {
+      height: calc(100vh + 100px);
+    }
+
+    .side-bar {
+      width: 16rem;
+      height: 100%;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .logo {
+      color: #fff;
+      padding: 0 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .link {
+      display: block;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    .link:hover {
+      background-color: #222;
+    }
+
+    .drop-container {
+      /* border: 1px dashed; */
+    }
+
+    .drop-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      text-align: left;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .drop-btn:hover {
+      background-color: #222;
+    }
+
+    .drop-content {
+      padding: 0 1rem;
+      display: none;
+    }
+
+    /* 드랍다운 컨테이너에 호버했을 때 */
+    .drop-container:hover .drop-content {
+      display: block;
+    }
+
+    .drop-link {
+      display: block;
+      color: #888;
+      padding: 0.5rem;
+    }
+
+    .drop-link:hover {
+      background-color: #eee;
+    }
+
+    main {
+      margin-top: 4rem;
+      margin-left: 16rem;
+    }
+  </style>
+
+  <nav class="side-bar">
+    <h1 class="logo">LOGO</h1>
+    <ul>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <div class="drop-container">
+          <button class="drop-btn">Dropdown</button>
+          <ul class="drop-content">
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>Side Bar</h1>
+    <p>..</p>
+  </main> -->
+
+  <!-- <style>
+    header {
+      /* fixed */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 100%;
+      /* design */
+      padding-left: 1rem;
+      background-color: #333;
+      color: #fff;
+      /* 
+        z-index
+        포지션 경쟁이 발생했을 때 
+        값이 클수록 우선순위를 갖는다
+        기본값 0
+      */
+      z-index: 1;
+    }
+
+    .side-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 16rem;
+      height: 100%;
+      /* design */
+      background-color: #ddd;
+    }
+
+    ul {
+      margin-top: 6rem;
+    }
+
+    .link {
+      color: #000;
+    }
+
+    main {
+      margin-top: 6rem;
+      margin-left: 16rem;
+      padding: 0 1rem;
+    }
+
+  </style>
+
+  <header>
+    <h3 class="logo">LOGO</h3>
+  </header>
+
+  <nav class="side-bar">
+    <ul>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>Dashboard</h1>
+    <p>..</p>
+  </main> -->
+
+
+  <!-- <h1>검색폼</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      width: 24rem;
+      /* 
+        display: block에서
+        x축 margin을 auto로 할 경우
+        엘리먼트가 가운데에 위치한다
+      */
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-input {
+      width: inherit;
+      /* design */
+      border: 1px solid #ddd;
+      padding: 0.5rem 2.5rem;
+      font-size: 1rem;
+      border-radius: 99px;
+      /* border 밖의 선 */
+      outline: none;
+    }
+
+    .icon {
+      width: 1rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      fill: #888;
+    }
+  </style>
+
+  <div class="container">
+    <input 
+      type="search" 
+      class="search-input"
+      placeholder="Search Google" 
+      name="q" 
+      autocomplete="off"
+    >
+    <svg 
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 512 512"
+    >
+      <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+    </svg>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      /* border: 1px dashed; */
+      width: 300px;
+      /* top left/right bottom */
+      margin: 100px auto 0;
+    }
+
+    .form-group {
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .username-input, .password-input {
+      /* size */
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      /* design */
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    .btn {
+      /* size */
+      width: 100%;
+      padding: 0.5rem;
+      /* design */
+      background-color: #333;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      /* misc (miscellaneous, 잡다한 것) */
+      cursor: pointer;
+    }
+
+    .login-menu {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .link {
+      color: #000;
+    }
+  </style>
+
+  <div class="container">
+    <h2 class="title">Login</h2>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="username-input" id="username" value="testuser">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="password-input" id="password" value="shhhh">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn">Login</button>
+    </div>
+    <div class="login-menu">
+      <a href="#" class="link">Sign Up</a>
+      <a href="#" class="link">Forgot Password?</a>
+    </div>
+  </div> 
+
+  /*1월29일*/
+
+  <h1>개인정보 폼</h1>
+
+  <style>
+    .container{
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.5;
+    }
+    .con-span-2{
+      grid-template-start: span 2;
+    }
+
+    .con-span-3{
+      grid-column-start: span 3;
+    }
+    .con-span-4{
+      grid-column-start: span4;
+    }
+    .con-span-6{
+      grid-column-start: span 6;
+    }
+    .label{
+      display: block;
+    }
+    .input, select{
+      /* input의 크기를 그리드 아이템에 맞춘다*/
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border: 1px solid #dddd;
+      border-radius: 0.25rem;
+    }
+  </style>
+  <div class="container">
+    <div class="col-span-3">
+      <label for="fname">First name</label>
+      <input type="text" id="fname">
+    </div>
+
+    <div class="col-span-3">
+      <label for="lname">Last name</label>
+      <input type="text" id="lname">
+    </div>
+
+    <div class="col-span-4">
+      <label for="email">Email address</label>
+      <input type="text" id="email">
+    </div>
+
+    <div class="col-span-2">
+      <label for="country">Country</label>
+      <select name="country" id="country">
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="mx">Mexico</option>
+      </select>
+    </div>
+
+    <div class="col-span-6">
+      <label for="address">Street Address</label>
+      <input type="text" id="address">
+    </div>
+
+    <div class="col-span-2">
+      <label for="city">City</label>
+      <input type="text" id="city">
+    </div>
+
+    <div class="col-span-2">
+      <label for="state">State / Province</label>
+      <input type="text" id="state">
+    </div>
+    
+    <div class="col-span-2">
+      <label for="zip">ZIP / Postal code</label>
+      <input type="text" id="zip">
+    </div>
+  </div>
+
+
+  /*option 라디오 사용 스타일 그리드 */
+  <h1>램 사이즈 선택</h1>
+  <style>
+    input{
+      display: none;
+    }
+    .container{
+      border: 1px dashed;
+      /*컨텐츠에 필요한 만큼만 넓이를 가진다. 나머지 gird와 동일*/
+      display: -ms-inline-grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 0.5rem;
+    }
+    .btn{
+      /*size*/
+      padding: 0.5rem 1rem;
+      /*desing*/
+      border: 1px solid #dddd;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: 600;
+    }
+      /*선택된 옵션에 아웃라인*/
+      input:checked+ .btn{
+        outline: 3px solid #3333;
+      }
+
+  </style>
+
+  <div class="container">
+    <input type="radio" name="btn" id="4gb">
+    <label for="4gb" class="btn">4GB</label>
+    <input type="radio" name="btn" id="8gb" checked>
+    <label for="8gb" class="btn">gGB</label>
+    <input type="radio" name="btn" id="16gb">
+    <label for="16gb" class="btn">16GB</label>
+    <input type="radio" name="btn" id="32gb">
+    <label for="32gb" name="btn">32GB</label>
+    <input type="radio" name="btn" id="64gb">
+    <label for="64gb" class="btn">64GB</label>
+  </div>
+
+  
+  /*문제 - 어떤 핸드폰을 사용하고 싶으신가요?*/
+  /*내가 푼거*/
+
+  <h1>Survey</h1>
+  <h3>Which phone do you want to purchase</h3>
+  <style>
+    .form-group{
+      margin-bottom: 0.5rem;
+    }
+    .div{
+        display: block;
+    }
+    .input{
+      display: block;
+    }
+    .container{
+      border: 1px dashed;
+      display: -ms-inline-grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 0.5rem;
+    }
+    .btn{
+      /*size*/
+      padding: 0.5rem 1rem;
+      border: 1px solid #3333 ;
+      border-radius: 100%;
+      text-align: left;
+      font-size: 600;
+    }
+  </style>
+  <div class="container">
+  <input type="button" name="btn" id="iphone 15 pro">
+  <label for="iphone 15 pro" class="btn">iphone 15 pro</label>
+  <input type="button" name="btn" id="Galaxy S24">
+  <lable for="Galaxy S24" class="btn">Galaxy S24</lable> 
+  <input type="button" name="btn" id="Pixel pro 8">
+  <label for="button" class="btn">Pixel pro 8</label>
+  <input type="button" name="btn" id="Other">
+  <label for="button" class="btn">Othher</label>
+  </div>
+
+
+
+  /*강사님 풀이*/ 
+  <h1>어떤 스마트폰을 구매하시겠습니까?</h1>
+  <style>
+    .form-group{
+      margin-bottom: 0.5rem;
+    }
+    .checkbox{
+      display: none;
+    }
+    /*옵션*/
+    .option{
+      display: block;
+      border: 2px solid #dddd;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+    }
+
+    /*선택자 옵션의 border 색 변경*/
+    .checkbox:checked + option{
+      border: 2px solid #3333;
+    }
+  </style>
+
+  <div class="form-group">
+    <input type="radio" name="phone" id="a" class="checkbox">
+    <label for="a" class="option">iphone 15 pro</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" name="phone" id="b" class="checkbox">
+      <label for="b" class="option">Galaxy S24</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" name="phone" id="c" class="checkbox">
+      <label for="c" class="option">Pixel Pro 8</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" name="phone" id="d" class="checkbox">
+        <label for="d" class="option">Other</label>
+    </div>
+
+ 
+
+  /*Color picker*/
+  /*내가 풀이한거*/
+
+  <h1>Color picker</h1>
+
+  <style>
+    .body{
+      display: block;
+      margin: 8px;
+    }
+    .checkbox{
+      display: o.5rem;
+      border-radius: 100%;
+
+    }
+    .button{
+      shape-margin: 100%;
+      shape-outside: circle(0 ,maxime(0, 1fr));
+    
+    }
+    .option{
+
+    }
+  </style>
+
+  <body>
+  <div class="container">
+    <input type="button" name="Color" id="white" class="checkbox" >
+    <label for="white" class="option"></label>
+  </div>
+  <div class="container">
+    <input type="button" name="Color" id="gray" class="checkbox">
+    <label for="gray" class="option"></label>
+  </div>
+  <div class="container">
+    <input type="button" name="Color" id="black" class="checkbox">
+    <label for="black" class="option"></label>
+  </div>
+
+</body>
+
+-->
+/*강사님 풀이*/
+
+<h1>Color picker</h1>
+
+<style>
+  .input{
+    display: none;
+  }
+
+  /*컬러 칩*/
+  .color-chip{
+    /*layout*/
+    display: inline-block;  /*꼭 있어야한다*/
+    margin-right: 0.25rem;
+    /*size*/
+    width: 2rem;
+    height: 2rem;
+    /*design*/
+    border: 1px solid #dddd;
+    border-radius: 99px;
+  }
+  /* 선택된 컬러칩에 아웃라인*/
+  input:checked + .color-chip{
+    outline: 4px solid #ddd;
+  }
+  .white{
+    background-color: #ddd;
+  }
+
+  .gray{
+    background-color: #888;
+  }
+
+  .black{
+    background-color: #000;
+  }
+</style>
+
+
+</body>
+</html>
