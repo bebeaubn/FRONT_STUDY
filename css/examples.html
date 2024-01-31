@@ -1305,7 +1305,7 @@
 
 </body>
 
-
+<--
   /* 컬러칩 */
     .color-chip {
       /* layout */
@@ -1345,7 +1345,9 @@
     <input type="radio" name="color" id="black">
     <label for="black" class="color-chip black"></label>
   </div> 
+-->
 
+<!--
 
   <h1>여러개 옵션 선택하기</h1>
 
@@ -1378,6 +1380,10 @@
     }
   </style>
 
+-->
+
+
+<!--
   <p>가지고 있는 기술을 선택하세요</p>
 
   <input type="checkbox" name="skills" id="html">
@@ -1392,8 +1398,10 @@
   <input type="checkbox" name="skills" id="react">
   <label for="react" class="option">React</label>
 
-  
-    <!-- <h1>아바타</h1>
+-->
+
+<!--
+     <h1>아바타</h1>
 
   <style>
     .container {
@@ -1520,7 +1528,9 @@
   </div> -->
 
 
-  <!-- <h1>이미지 확대효과</h1>
+  <!-- 
+    
+    <h1>이미지 확대효과</h1>
 
   <style>
     .container {
@@ -1546,10 +1556,13 @@
 
   <div class="container">
     <img src="https://img2.sbs.co.kr/img/seditor/VD/2022/05/11/0Df1652234259596-640-0.jpg" alt="">
-  </div> -->
+  </div> 
+
+-->
 
 
-  <!-- <h1>오버레이가 있는 이미지</h1>
+  <!-- 
+    <h1>오버레이가 있는 이미지</h1>
 
   <style>
     .container {
@@ -1601,7 +1614,154 @@
   <div class="container">
     <img src="https://images.chosun.com/resizer/kUnX8CwWcbCW0fRzwC9mUfRFhUM=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/4ILI6TN5HJAHJJZAZZBAPZ64WU.jpg" alt="">
     <div class="overlay">Caption</div>
-  </div> -->
+  </div> 
+
+  <h1>Figure</h1>
+
+  <style>
+    .container{
+      width: 400px;
+      height: 300px;
+      position: relative;
+    }
+
+    img{
+      /*size*/
+      width: inherit;
+      height: inherit;
+      /*fit*/
+      object-fit: cover;
+    }
+
+    .overlay{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0 0 0 /0.5);
+      color: #fff;
+      width: inherit;
+      padding: 0.1rem;
+      box-sizing: border-box;
+
+    }
+  </style>
+  <div class="container">
+    <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2023/05/12/119255016.1.jpg" alt="">
+  <div class="overlay">
+    <h3>pumbaa</h3>
+    <p>이미지 이름 ~</p>
+  </div>
+</div>
+
+-->
+/* 1월 31일 수업*/
+<!--
+
+<h1>Side by side image</h1>
+/*반응형 이미지 화면 비율에 맞춰서 움직임 gird */
+/*이미지를 잘라서 쓰는것이 가장 좋다*/
+/*이미지의 사이즈를 정해서 넣어주는것이 보기 좋음 ex) 유튜브 썸네일*/
+<style>
+  .container{
+    border: 1px dashed;
+    display: grid;
+    grid-template-columns: repeat(1 , minmax(0, 1fr));
+    gap: 1rem;
+
+  }
+
+  img{
+    /*이미지의 넓이를 그리드 아이템에 맞춘다*/
+    width: 100%;
+    /*이미지의 비율에 맞게 높이가 정해진다*/
+    height: auto;
+  }
+  /*스몰사이즈 이상*/
+  @media(min-width:640px){
+    .container{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
+<div class="container">
+  <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2023/05/12/119255016.1.jpg" alt="">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Bbami_torty_cat.jpg" alt="">
+
+</div>
+
+-->
+
+<!--
+
+/*반응형 문제풀이*/
+
+<h1>Article</h1>
+<style>
+  .container{
+    border: 1px dashed;
+    display: grid;
+    grid-template-columns: repeat(1 , minmax(0, 1fr));
+    gap: 1rem;
+
+  }
+
+  img{
+    /*이미지의 넓이를 그리드 아이템에 맞춘다*/
+    width: 100%;
+    /*이미지의 비율에 맞게 높이가 정해진다*/
+    height: auto;
+  }
+  /*스몰사이즈 이상*/
+  @media(min-width:640px){
+    .container{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   
+</style>
+<div class="container">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Bbami_torty_cat.jpg" alt="">
+  <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi vitae maxime <br>
+    deserunt corrupti eos mollitia velit vel aperiam reprehenderit quaerat odit sapiente,<br> 
+    animi cupiditate asperiores blanditiis repellendus corporis fugiat! Minus.</div>
+</div>
+
+/*나는 왜 스몰에 안맞는지.... ㅜㅜ */
+
+-->
+
+
+
+/*강사님 문제풀이*/
+
+<h1>Article</h1>
+<style>
+  .container{
+    border: 1px dashed;
+    display: grid;
+    grid-template-columns: repeat(1 , minmax(0, 1fr));
+    gap: 1rem;
+
+  }
+  img{
+    /*이미지의 넓이를 그리드 아이템에 맞춘다*/
+    width: 100%;
+    /*이미지의 비율에 맞게 높이가 정해진다*/
+    height: auto;
+  }
+  /*스몰사이즈 이상*/
+  @media(min-width:640px){
+    .container{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+</style>
+<div class="container">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Bbami_torty_cat.jpg" alt="">
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt alias dolorem,<br>
+     architecto maxime neque eaque fugiat laudantium vitae illo facilis sequi <br>
+    laboriosam, nemo quod voluptatum dignissimos minus nostrum non at!</div>
+</div>
 </body>
 </html>
