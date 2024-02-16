@@ -249,316 +249,350 @@
 
 // console.log(foo);
 
-/*
-Q. 데이터 타입
 
-다음 고양이에 대한 정보를 변수로 선언해 보세요
-1 이름(name)
-값 치즈
-타입 : 문자열
+/* 
+  Q. 데이터 타입
 
-2 집 (HOME)
-값 : 없음 (길고양이)
-타입 : null
+  다음의 고양이에 대한 정보를 변수로 선언해보세요
+  (괄호안은 변수의 이름)
 
-3 나이 (age)
-값 : 2살
-타입  :Number
+  1 이름 (name)
+  값: 치즈
+  타입: 문자열
 
+  2 집 (home)
+  값: 없음 (길고양이)
+  타입: null
 
-4 귀여운 여부(isCute)
-값 : 귀여움
-타입 : Boolean
+  3 나이 (age)
+  값: 2살
+  타입: Number
 
-
-<!--정답-->
-
-
-
-var name = 치즈
-consol.log(name)
-
-
-val HOME = null;
-consol.log(HOME)
-
-var age = 2
-consol.log(age)
-
-
-val isCute = true
-consol.log(isCute)
-
+  4 귀여움 여부(isCute)
+  값: 귀여움
+  타입: Boolean
 */
 
-// var (variable , 변수) - 변수선언 예약어
+// var (variable, 변수) - 변수 선언 예약어
 
-/*
-var name ="치즈";
-var home = null;
-var age = 2;
-var isCute =true;
-
-*/
+// var name = "치즈";
+// var home = null;
+// var age = 2;
+// var isCute = true;
 
 
 
 /*
-기본 메서드
-데이터에 특정한 작업을 수행한다
+  기본 메서드
+  데이터에 특정한 작업을 수행한다
 
-1 문자열 메서드
-2 넘버 메서드
+  1 문자열 메서드
+  2 넘버 메서드
 */
 
 
 /*
-문자열 메서드
-1 toUpperCase / toLowerCase
-2 indexOf
-3 substring
-4 trim
+  문자열 메서드
 
+  1 toUpperCase / toLowerCase
+  2 indexOf
+  3 substring
+  4 trim
 */
+
+
 
 // 1 toUpperCase() / toLowerCase()
-// 문자열의 모든 문자를 대소문자로 반환한다
+// 문자열의 모든 문자를 대문자/소문자로 변환한다
 
-var foo = "bar";
+// var foo = "bar";
 
-consol.log(foo.toUpperCase());
+// console.log(foo.toUpperCase());
+// // BAR
 
-//BAR
 
-// 2 indexOf (검색할 문자열, 위치(옵션, 기본값은 0))
-// 인자 문자열의 인덱스를 리턴한다  (반환)한다
-// 인자 - 메서드에 전달되는 데이터  
+// 2 indexOf(검색할 문자열, 위치(옵션, 기본값은 0))
+// 인자 문자열의 인덱스를 리턴(반환)한다
 
-var s = "hello world"
+// 인자 - 메서드에 전달되는 데이터
 
-console.log(s.indexOf("e"));
-// 1 
+// var s = "hello world";
 
-console.log(s.indexOf("W"))
-//6
+// console.log(s.indexOf("e"));
+// // 1
+// console.log(s.indexOf("w"));
+// // 6
+// console.log(s.indexOf("l"));
+// // 2 - 첫번째 l의 인덱스를 리턴한다
+// console.log(s.indexOf("l", 5));
+// // 9 - world의 l의 인덱스
+// console.log(s.indexOf("world"));
+// // 6 - 첫번째 문자의 인덱스를 리턴한다
+// console.log(s.indexOf("bar"));
+// // -1 - 인자 문자열이 존재하지 않을 때
 
-console.log(s.indexOf("l"))
-//2  -> 첫번째 l의 인덱스를 리턴한다
 
-console.log(s.indexOf("l", 5));
-// 9  - > world의 l의 인덱스 
-
-console.log(s.indexOf("world"));
-// 6 - >첫번째 문자의 인덱스를 리턴한다
-
-console.log(s.indexOf("bar"));
-// -1 -> 인자의 문자열이 존재하지 않을떄
-
-// 3 substring (시작 인덱스 , 끝인덱스(옵션))
+// 3 substring(시작 인덱스, 끝인덱스(옵션))
 // 문자열에서 특정 문자들을 추출한다
 
-var s = "hello world";
+// var s = "hello world";
 
-console.log(s.substring(0,4));
-// hell -> 끝 인덱스 바로 앞 글자까지 추출한다
+// console.log(s.substring(0, 4));
+// // hell - 끝인덱스 바로 앞 글자까지 추출한다
 
-console.log(s.substring(0));
-// hello world -> 시작 인덱스부터 전부 추출한다
+// console.log(s.substring(0));
+// // hello world - 시작 인덱스부터 전부 추출한다 
 
 
-
-//trim()
-// 문자열의 앞과 뒤의 공백을 제거한다.
+// trim()
+// 문자열의 앞과 뒤의 공백을 제거한다
 // 예) 데이터 정제작업 등
-// 정제작업 -> 회원가입할때 의미없는 띄어쓰기를 넣을경우 정제 처리해서 저장
-
-var foo = " bar ";
-console.log(foo);
-// bar 
-
-console.log(foo.trim());
-//bar
 
 
+// var foo = "  bar  ";
 
- /* Q 메서드 문제
-     Q에서 끝까지 모든 문자를 추출해 보세요" */
- 
-var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+// console.log(foo);
+// //  bar  
 
-console.log(alphabet.indexOf(16,25))
+// console.log(foo.trim());
+// // bar
 
-//답 
-//var startIndex = alphabet.indexOf("Q");
-//console.log(alphabet.substring(startIndex));
-//QRSTUVWXYZ
 
-// ------------------ 연산자 부분
-/* 
-연산자
-1 수리 연산자
-2 대입 연산자
-3 비교 연산자
-4 논리 연산자
-5 타입 연산자
+/*
+  Number 메서드
+
+  1 toPrecision
+  2 isString
+*/
+
+
+// 1 toPrecision(표현할 숫자의 갯수)
+// 숫자의 정밀도를 설정한다
+
+// var PI = Math.PI; // 자바스크립트에 내장된 데이터
+
+// console.log(PI);
+// // 3.141592653589793 - 기본적으로 16자리 숫자까지 표현
+
+
+// var precisePI = PI.toPrecision(100);
+
+// console.log(precisePI); // 정밀도 증가
+
+
+
+// 2 toString()
+// Number 타입 값을 문자열 타입 값으로 변환한다
+
+
+// var year = 2023;
+
+// console.log(year);
+// // 2023
+// console.log(typeof year); // 변수의 타입 리턴
+// // number
+
+
+// var year = 2023;
+
+// console.log(year.toString());
+// // "2023"
+// console.log(typeof year.toString());
+// // string
+
+
+
+// Q. 메서드 문제
+// Q에서 끝까지 모든 문자를 추출해보세요
+
+// var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// var startIndex = alphabet.indexOf("Q");
+
+// console.log(alphabet.substring(startIndex));
+// // QRSTUVWXYZ
+
+
+
+/*
+  연산자
+
+  1 수리연산자
+  2 대입연산자
+  3 비교연산자
+  4 논리연산자
+  5 타입연산자
 */
 
 
 /*
-수리연산자
+  수리연산자
 
-1 4측 연산자
-2 증가 연산자
-3 검소 연산자
-4 지수 연산자
-5 계수 연산자
+  1 4칙 연산자
+  2 증가 연산자
+  3 감소 연산자
+  4 지수 연산자
+  5 계수 연산자
 */
 
 
-// 1 4측연산자
-// + ,- , *, /
+// 1 4칙 연산자
+// +, -, *, /
 
-var add = 1 + 1;
-var subtract = 2 - 1;
-var divide = 1 / 2;
-var multiply = 1 * 2;
-
-console.log("1 + 1 =", add);
-console.log("2 - 1 =",subtract);
-console.log("1 / 2 =",divide);
-console.log("1 * 2 =",multiply);
+// var add = 1 + 1;
+// var subtract = 2 - 1;
+// var divide = 1 / 2;
+// var multiply = 1 * 2;
 
 
-// 문자열과 + 를 사용하는경우
-
-var s = "hello" + " world"
-
-console.log(s);
-// hello world
-
-//문자열과 숫자를 더하는 경우
-
-var s = "hello" + 2024;
-console.log(s);
-// "hello 2024"
-console.log(typeof s);
-// string
+// console.log("1 + 1 =", add);
+// console.log("2 - 1 =", subtract);
+// console.log("1 / 2 =", divide);
+// console.log("1 * 2 =", multiply)
 
 
-// 2 증감연산자
-// 변수를 1씩 증가시킨다.
+// 문자열과 +를 사용하는 경우
 
-var n = 1;
+// var s = "hello" + " world";
 
-n++;  //증가 연산자
+// console.log(s);
+// // hello world
 
-console.log(n);
-// 2
+
+// 문자열과 숫자를 더하는 경우
+
+// var s = "hello " + 2024;
+
+// console.log(s);
+// // "hello 2024"
+// console.log(typeof s);
+// // string
+
+
+// 2 증가 연산자
+// 변수를 1 증가시킨다
+
+// var n = 1;
+
+// n++; // 증가 연산자
+
+// console.log(n);
+// // 2
 
 
 // 3 감소연산자
-// 변수를 1씩 감소시킨다.
+// 변수를 1 감소시킨다
 
-var n =1;
+// var n = 1;
 
-n--;
+// n--;
 
-console.log(n);
-// 0
+// console.log(n);
+// // 0
+
 
 
 // 4 지수 연산자
 // 기수 ** 지수
 
-var exp = 2 ** 7;
+// var exp = 2 ** 7;
 
-console.log(exp);
-//128
+// console.log(exp);
+// 128
 
 
-//5 계수(나눗셈의 나머지) 연산자
-//나누어 지는수 % 나누어 지는수
 
-var mod = 5 % 2;
+// 5 계수(나눗셈의 나머지) 연산자
+// 나누어지는수 % 나누는 수
 
-console.log(mod);
-// 1 
+// var mod = 5 % 2;
+
+// console.log(mod);
+// // 1
+
 
 
 /*
- 대입 연산자
-1 변수 대입 연산자
-2 더하기 대입 연산자
-3 뺴기 대입 연산자
-4 곱하기 대입 연산자
-5 나누기 대입 연산자
-6 지수 대입 연산자
-7 계수 대입 연산자
+  대입 연산자
 
+  1 변수 대입 연산자
+  2 더하기 대입 연산자
+  3 빼기 대입 연산자
+  4 곱하기 대입 연산자
+  5 나누기 대입 연산자
+  6 지수 대입 연산자
+  7 계수 대입 연산자
 */
+
 
 // 1 변수 대입 연산자
 
-var foo ="bar";  // = (변수대입 연산자)
+// var foo = "bar"; // = (변수대입 연산자)
+
 
 // 2 더하기 대입 연산자
 
-var n = 1;
+// var n = 1;
 
-n += 1;  //+=(더하기 대입 연산자)
-// n = n + 1와 같다
+// n += 1; // += (더하기 대입 연산자)
+// // n = n + 1와 같다
 
-console.log(n);
-// 2 
+// console.log(n);
+// // 2
 
-/*
-비교 연산자
-
-1 동등연산자
-2 엄격 동등 연산자
-3 비동등 연산자
-4 엄격 비동등 연산자
-5 gt 연산자
-6 gte 연산자
-7 lt 연산자
-8 lte 연산자
-*/
 
 /*
-1 동등 연산자
+  비교 연산자
 
-표현식1 == 표현식2
-
-두 표현식이 동등하면 참
-두 표현식이 동등하지 않으면 거짓을 리턴한다
+  1 동등 연산자
+  2 엄격 동등 연산자
+  3 비동등 연산자
+  4 엄격 비동등 연산자
+  5 gt 연산자
+  6 gte 연산자
+  7 lt 연산자
+  8 lte 연산자
 */
 
-console.log(1 == 2);
-// falfe
-console.log("foo" == "bar");
-// false
-console.log(0 == false);
-// true
-console.log(2023 == "2023");
-//true
 
 /*
-2 엄격 동등 연산자
+  1 동등 연산자
 
-표현식1 === 표현식2
+  표현식1 == 표현식2
 
-두 표현식이 엄격하게 동등하면 참
-두 표현식이 엄격하게 동등하지 않으면 거짓을 리턴한다
+  두 표현식이 동등하면 참
+  두 표현식이 동등하지 않으면 거짓을 리턴한다
 */
 
-console.log(1 === 2);
-// false
-console.log("foo" === "bar");
-//false
-console.log(0 === false);
-//false
-console.log(2023 === "2023");
-//false
+
+// console.log(1 == 2);
+// // false
+// console.log("foo" == "bar");
+// // false
+// console.log(0 == false);
+// // true
+// console.log(2023 == "2023"); 
+// // true
+
+
+/*
+  2 엄격 동등 연산자
+
+  표현식1 === 표현식2
+
+  두 표현식이 엄격하게 동등하면 참
+  두 표현식이 엄격하게 동등하지 않으면 거짓을 리턴한다
+*/
+
+
+// console.log(1 === 2); 
+// // false
+// console.log("foo" === "bar");
+// // false
+// console.log(0 === false); 
+// // false
+// console.log(2023 === "2023"); 
+// // false
 
 
 /*
@@ -710,9 +744,6 @@ console.log(2023 === "2023");
 // console.log("" == false);
 // console.log(null != false);
 // console.log(1 == true && 0 == false)
-
-
-//------------------------------------ 조건식 부분 
 
 
 
@@ -1360,224 +1391,1004 @@ console.log(2023 === "2023");
 // // 성인입니다
 
 
-// 여기 2월8일 수업
-
 // Q2. 인자(자연수)를 전달하면 1부터 인자까지의 합을 구해서
 // 반환하는 함수를 만들어보세요
 // 예) 10을 전달하면 1부터 10까지의 합을 구한다
 
 
-function f(m) {
-var sum =0;
-for (var n=1; n <=m; n++){
-  sum += n;
-}
-  return sum;
 
-}
-    // * 정답
- //var r = f(10);
+// function f(m) {
+//   var sum = 0;
 
- //console.log(r); 
+//   for (var n = 1; n <= m; n++) {
+//     sum += n;  
+//   }
 
+//   return sum;
+// }
 
- /* 
- 배열 (Array)
- 한개 이상의 값을 가지는 데이터 타입
+// var r = f(10);
 
- 1 구조
- 2 기본 사용법
- 3 배열 메서드
- 4 배열 순회
-
- */
-
- // 1 구조
-
- // 각 값 -> 아이템
-
- var arr = [10, 20, 30];
-
- console.log(arr);
+// console.log(r);
 
 
- /*
- 기본사용법
 
- 1 아이템에 접근하기
- 2 아이템 바꾸기
- 3 아이템의 갯수 구하시
- */
+/*
+  배열 (Array)
+  한개 이상의 값을 가지는 데이터 타입
 
- // 1 아이템에 접근하기
-
- var arr = [10, 20, 30];
- 
- // 인덱스로 접근
- console.log(arr[0]);  //10 
- console.log(arr[1]);  //20
- console.log(arr[2]);  //30
+  1 구조
+  2 기본 사용법
+  3 배열 메서드
+  4 배열 순회
+*/
 
 
- // 2 아이템 바꾸기
+// 1 구조
 
- var arr = [10, 20 ,30];
+// 각 값 - 아이템
+// var arr = [10, 20, 30];
 
- // 새 값 대입
- arr[2] = 99;
+// console.log(arr);
 
- console.log(arr)
 
- // 10 , 20 , 99
+/*
+  기본 사용법
+
+  1 아이템에 접근하기
+  2 아이템 바꾸기
+  3 아이템의 갯수 구하기
+*/
+
+
+// 1 아이템에 접근하기
+
+// var arr = [10, 20, 30];
+
+// // 인덱스로 접근
+// console.log(arr[0]); // 10
+// console.log(arr[1]); // 20
+// console.log(arr[2]); // 30
+
+
+// 2 아이템 바꾸기
+
+// var arr = [10, 20, 30];
+
+// // 새 값 대입
+// arr[2] = 99;
+
+// console.log(arr)
+// // 10, 20, 99
+
 
 // 3 아이템 갯수 구하기
 
-var arr = [10, 20 , 30];
+// var arr = [10, 20, 30];
 
-console.log(arr.length);
-
-// 정답 3 
-
-
-/* Q. 기본 사용법 문제
-
-1 탑5 자동차 제조사 리스트(문자열 배열)을 만들어 보세요
--볼보, BMW, 현대,토요타,포드
-
-2.최근 토요타가 연비조작사건으로 나락으로 가게생겼습니다.
- 토요타를 기아로 바꾸어 보세요 */
-
- // 내가 푼 문제풀이
-
- //문자열 배열
- var arr = [볼보, BMW, 현대, 토요타, 포트];
-
- // 문자열 변경
-arr[3] = 기아 ; 
-
-// 문자열 출력
-console.log[arr.length]
-
-// 강사님 풀이
-
-var top5brands = ["볼보", "BMW","현대","토요타","포드"];
-
-//도요타를 기아로 바꾸기
-
-top5brands[3] = "기아";
-
-console.log(top5brands)
+// console.log(arr.length);
+// 3
 
 
 /*
- 배열 메서드
- 배열에 특정한 작업을 수행한다
+  Q. 기본 사용법 문제
 
- 1 push
- 2 pop
- 3 concat
- 4 splice
- 5 sort
+  1 탑5 자동차 제조사 리스트(문자열 배열)을 만들어보세요
+  - 볼보, BMW, 현대, 토요타, 포드
+
+  2. 최근 토요타가 연비조작사건으로 나락으로 가게 생겼습니다
+  토요타를 기아로 바꾸어보세요
 */
 
-/*
- 1 push (새아이템1, 새아이템2 .....)
- 배열의 마지막에 새 아이템(들)을 추가한다
 
-*/
+// var top5brands = ["볼보", "BMW", "현대", "토요타", "포드"];
 
-var arr = [10, 20];
+// // 도요타를 기아로 바꾸기
+// top5brands[3] = "기아"
 
-arr.push(30);
-
-console.log(arr);
-// 10, 20, 30
+// console.log(top5brands)
 
 
 /*
-2 pop ()
+  배열 메서드
+  배열에 특정한 작업을 수행한다
 
-배열의 마지막 아이템을 제거한다
-
+  1 push
+  2 pop
+  3 concat
+  4 splice
+  5 sort
 */
- 
-var arr = [10, 20, 30];
 
-arr.pop();
-
-console.log(arr);
-
-// 10 , 20
 
 /*
- 3 concat(배열1, 배열2 ....)
-  -- 새로운 배열들을 기존의 배열뒤에 연결한다.
-     연결된 배열을 리턴한다
+  1 push(새아이템1, 새아이템2, ...)
+
+  배열의 마지막에 새 아이템(들)을 추가한다
 */
+
+
+// var arr = [10, 20];
+
+// arr.push(30);
+
+// console.log(arr);
+// // 10, 20, 30
+
+
+/*
+  2 pop()
+
+  배열의 마지막 아이템을 제거한다
+*/
+
+
+// var arr = [10, 20, 30];
+
+// arr.pop();
+
+// console.log(arr);
+// // 10, 20
+
+
+/*
+  3 concat(배열1, 배열2, ..)
+
+  새로운 배열들을 기존의 배열 뒤에 연결(concatenation)한다
+  연결된 배열을 리턴한다
+*/
+
 
 var arr1 = [10, 20];
 var arr2 = [30, 40];
 
-var r = arr1.concat(arr2);
+var r = arr1.concat(arr2); 
 
-console.log(r);
-// 10, 20 , 30, 40
+// console.log(r);
+// 10, 20, 30, 40
 
 
 /*
+  4 splice
+  원하는 위치에 아이템을 추가하거나 삭제할 수 있다
 
-4 splice
- 원하는 위치에 아이템을 추가하거나 삭제할수있다.
-
- - 사용방법
- splice(시작 인덱스 , 삭제갯수, 새아이템1 , 새아이템2 ...)
- 시작 인덱스는 필수
-
- */
-
- //1
-var arr = [10,20,30,40];
-
-//인덱스2에 해당하는 아이템부터 그 뒤에 모든 아이템 삭제 
-
-arr.splice(2);
-console.log(arr);
-
-//2
-var arr = [10, 20, 30 ,40];
-
-//인덱스2의 아이템부터 뒤로 1개의 아이템을 삭제한다.
-arr.splice(2, 1);
-
-console.log(arr);
-
-//10 ,20 ,40
-
-
-// 3  뭘 놓친거지 하하하하하 눈물나네 
-
-//여기 봐야하 ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ
-
-// 4 여기도 봐야함 하하하하하하하 놓쳤다 
-
-/*
-5 sort
-아이템을 정렬한다
-숫자 배열인 경우 오름차순
-문자열 배열의 경우 알파벳순
+  - 사용방법
+  splice(시작인덱스, 삭제갯수, 새아이템1, 새아이템2, ..)
+  시작인덱스는 필수
 */
 
-var arr = [10, 30, 20];
+// 1
+// var arr = [10, 20, 30, 40];
 
-arr.sort();
+// // 인덱스2에 해당하는 아이템부터 그 뒤의 모든 아이템 삭제
+// arr.splice(2);
 
-console.log(arr);
-
-//10 , 20, 30   <-- 오름차순 배열로 바뀜
-
-
-
+// console.log(arr);
+// // 10, 20
 
 
+// 2
+// var arr = [10, 20, 30, 40];
+
+// // 인덱스2의 아이템부터 뒤로 1개의 아이템을 삭제한다
+// arr.splice(2, 1);
+
+// console.log(arr);
+// 10, 20, 40
 
 
+// 3
+// var arr = [10, 20, 30, 40];
+
+// // 인덱스2의 아이템부터 뒤로 1개의 아이템을 삭제하고
+// // 그 자리에 99를 추가한다
+// arr.splice(2, 1, 99);
+
+// console.log(arr);
+// // 10, 20, 99, 40
+
+
+/*
+  5 sort
+  아이템을 정렬한다
+  숫자 배열인 경우 오름차순
+  문자열 배열의 경우 알파벳순
+*/
+
+
+// var arr = [10, 30, 20];
+
+// arr.sort();
+
+// console.log(arr);
+// // 10, 20, 30
+
+
+/*
+  Q1. 배열메서드
+
+  자동차 리스트의 마지막에 새 자동차를 추가해보세요
+*/
+
+// var cars = ["스타리아", "아반떼", "아이오닉6"];
+// var newCar = "캐스퍼";
+
+// cars.push(newCar);
+
+// console.log(cars);
+
+
+/*
+  Q2. 배열 메서드
+
+  아시아 자동차 리스트(배열)을 만들어보세요
+*/
+
+
+// var koreanCars = ["현대", "기아"];
+// var japaneseCars = ["렉서스", "닛싼", "토요타"];
+
+// var asianCars = koreanCars.concat(japaneseCars);
+
+// console.log(asianCars);
+
+
+
+/*
+  배열 순회 (loop)
+  배열에 특정한 작업을 수행한다
+
+  1 배열의 각아이템 업데이트하기
+  2 배열 필터링하기
+*/
+
+
+// 1 배열의 각 아이템 업데이트
+// 각 아이템에 10을 곱해야 하는 경우
+
+// var arr = [10, 20, 30];
+
+// // 변수 i를 인덱스로 활용한다
+// for (var i = 0; i < arr.length; i++) {
+//   console.log(arr[i] * 10);
+// }
+
+
+// 2 배열 필터링
+// 성인만 출력해야 하는 경우
+
+// var ages = [12, 19, 23, 30];
+
+// for (var i = 0; i < ages.length; i++) {
+//   if (ages[i] >= 18) {
+//     console.log(ages[i]);
+//   }
+// }
+
+
+/*
+  Q1. 배열 순회
+  각 브랜드의 이름을 대문자로 출력해보세요
+
+  결과:
+  APPLE
+  SAMSUNG
+  HUAWEI
+*/
+
+// var brands = ["apple", "samsung", "huawei"];
+
+// for (var i=0; i < brands.length; i++) {
+//   console.log(brands[i].toUpperCase());
+// }
+
+
+
+/*
+  Q2. 배열 순회
+
+  b로 시작하는 아이템을 출력해보세요
+
+  결과:
+  bar
+  baz
+*/
+
+// var arr = ["foo", "bar", "baz"];
+
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i][0] == "b") {
+//     console.log(arr[i]);
+//   }
+// }
+
+
+// var cars = ["그랜저", "소나타", "캐스퍼"];
+
+// var r = cars.join("와 ");
+
+// console.log(r);
+// console.log(typeof r);
+// // 그랜저, 소나타, 캐스퍼
+
+
+// var cars = ["레이", "카니발", "K6"];
+
+// var r = cars.includes("싼타페"); // 포함여부
+
+// console.log(r);
+// // false
+
+
+// var cars = ["레이", "카니발", "K6"];
+
+// var r = cars.indexOf("카니발");
+
+// console.log(r);
+// 1
+
+
+/*
+  객체 (Object)
+  데이터와 함수의 집합
+  데이터를 다루기 위한 기본 단위로 활용된다
+
+  1 구조
+  2 기본 사용방법
+*/
+
+
+/*
+  구조
+
+  1 속성 (property)
+  객체가 가진 데이터
+  key와 value로 구성된다
+
+  2 메서드 (methods)
+  속성 중에서 값(value)이 함수인 것을 특별히 메서드라고 부른다
+*/
+
+
+// var cat = {
+//   // key: value
+//   name: "치즈",
+//   home: null,
+//   sound: function () { // 메서드
+//     return "야옹";
+//   }
+// }
+
+
+// console.log(cat);
+
+
+/*
+  Q. 객체의 구조
+
+  "korea"라는 이름의 객체를 선언해보세요
+
+  - 속성
+  1 수도 (Capital city)
+  값: 서울
+  타입: 문자열
+
+  2 인구 (Population)
+  값: 5000
+  타입: Number
+
+  3 언어 (Language)
+  값: 한국어
+  타입: 문자열
+
+  4 G7 여부
+  값: 아니오
+  타입: Boolean
+
+  - 메서드
+  1 K-POP 재생기능
+  케이팝 음악을 재생한다
+*/
+
+
+// var korea = {
+//   capitalCity: "서울",
+//   population: 5000,
+//   language: "한국어",
+//   isG7: false,
+//   kpop: function() {
+//     return "내가 만든 쿠키~"
+//   }
+// }
+
+
+// console.log(korea);
+
+
+/*
+  기본 사용법
+
+  1 속성에 접근하기
+  2 속성 추가 / 수정
+  3 속성 삭제
+*/
+
+
+// 1 속성에 접근
+// var cat = {
+//   name: "치즈",
+//   home: null,
+//   sound: function () {
+//     return "야옹";
+//   }
+// }
+
+
+// // name
+// console.log(cat.name); // 치즈
+// console.log(cat["name"]); // 치즈
+// // home
+// console.log(cat.home); // null
+// // 없는 속성에 접근 시도
+// console.log(cat.color); // undefined
+// // 메서드 호출
+// console.log(cat.sound()); // 야옹
+
+
+// 2 속성 추가 / 수정
+
+// var cat = {
+//   name: "치즈",
+//   home: null
+// };
+
+// // 속성 추가
+// cat.age = 2;
+
+// // 메서드 추가 (함수표현식)
+// cat.sound = function () {
+//   return "야옹";
+// }
+
+// console.log(cat);
+
+// // 속성 수정
+// cat.home = "삼산동"; // 입양됨
+
+// console.log(cat)
+
+
+// 4 속성 삭제
+
+// var cat = {
+//   name: "치즈",
+//   home: null
+// }
+
+// delete cat.home; // 개냥정보 침해
+
+// console.log(cat);
+
+
+/*
+  Q1. 기본 사용법
+
+  판매중인 맥주의 이름만 출력해보세요
+  (available - true)
+
+  결과:
+  Heineken
+  Budwiser
+  Kirin
+*/
+
+
+// var beers = [
+//   { name: "Guinness", origin: "Ireland", available: false },
+//   { name: "Heineken", origin: "Netherlands", available: true },
+//   { name: "Budwiser", origin: "USA", available: true },
+//   { name: "Kirin", origin: "Japan", available: true },
+// ]
+
+
+// for (var i = 0; i < beers.length; i++) {
+//   if (beers[i].available == true) {
+//     console.log(beers[i].name);
+//   }
+// }
+
+
+/*
+  Q2. 기본 사용법
+
+  아일랜드 맥주가 재입고 되었습니다
+  객체에 반영해보세요
+*/
+
+
+// var irishBeer = {
+//   name: "기네스",
+//   origin: "아일랜드",
+//   available: false // 판매중(available)
+// };
+
+
+// irishBeer.available = true;
+
+// console.log(irishBeer);
+
+
+/*
+  클래스 (Class)
+  객체 생성을 위한 틀
+  효율적인 객체 관리를 위해 사용된다
+
+  1 클래스의 구조
+  2 인스턴스
+  3 생성자
+  4 함수 멤버
+  5 static 멤버
+  6 내장된 클래스
+  7 자바스크립트에서 넓은 의미에서의 객체
+*/
+
+
+/*
+  클래스의 구조
+
+  1 클래스 선언
+  2 클래스 멤버
+*/
+
+
+// 1 클래스 선언
+
+// 클래스의 이름은 대문자로 시작해야 한다
+// class ClassA {
+//   // 클래스 정의
+// }
+
+
+// 2 클래스 멤버 - 클래스에 속한 데이터
+
+// class Beer {
+//   // 변수 멤버
+//   name;
+//   origin;
+//   available;
+
+//   // 함수 멤버
+//   drink() {
+//     return "시원하다!";
+//   }
+// }
+
+
+/*
+  인스턴스 (instance)
+  클래스로부터 생성된 객체
+
+  1 인스턴스 생성 방법
+  2 instanceof 연산자
+  3 여러개 인스턴스 생성하기
+*/
+
+// // 1 인스턴스 생성 방법
+// class Beer {
+//   name;
+//   origin;
+//   available;
+// }
+
+// // Beer 클래스의 인스턴스
+// var irishBeer = new Beer();
+
+// // 인스턴스에 속성값 할당
+// irishBeer.name = "Guinness"
+// irishBeer.origin = "Ireland"
+// irishBeer.available = false;
+
+// console.log(irishBeer);
+
+// // 클래스의 인스턴스인지 확인한다
+// console.log(irishBeer instanceof Beer); // true
+
+
+// 3 여러개의 인스턴스 생성하기
+// class Beer {
+//   name;
+//   origin;
+//   available;
+// }
+
+// var irishBeer = new Beer();
+// irishBeer.name = "Guinness"
+// irishBeer.origin = "Ireland"
+// irishBeer.available = false;
+
+// var dutchBeer = new Beer();
+// irishBeer.name = "Heineken"
+// irishBeer.origin = "Netherlands"
+// irishBeer.available = true;
+
+// var americanBeer = new Beer();
+// irishBeer.name = "Budwiser"
+// irishBeer.origin = "USA"
+// irishBeer.available = true;
+
+// console.log(irishBeer instanceof Beer); // true
+// console.log(dutchBeer instanceof Beer); // true
+// console.log(americanBeer instanceof Beer); // true
+
+
+/*
+  생성자 (constructor)
+
+  인스턴스의 속성 설정을 처리한다
+*/
+
+// class Beer {
+//   name;
+//   origin;
+//   available;
+
+//   constructor (name, origin, available) {
+//     // this - 인스턴스
+//     this.name = name;
+//     this.origin = origin;
+//     this.available = available;
+//   }
+// }
+
+
+// var irishBeer = new Beer("Guinness", "Ireland", false);
+// var dutchBeer = new Beer("Heineken", "Netherlands", true);
+// var americanBeer = new Beer("Budwiser", "USA", true);
+
+
+/*
+  함수 멤버
+
+  인스턴스의 메서드가 된다
+*/
+
+
+// class Beer {
+
+//   // ..
+
+//   // 함수 멤버
+//   drink() {
+//     return "시원하다!";
+//   }
+// }
+
+// var beer = new Beer();
+
+// console.log(beer.drink());
+
+
+/*
+  static 멤버
+
+  클래스와 관련된 유용한 기능을 제공한다
+  클래스 자체가 호출한다
+*/
+
+
+// class Beer {
+  
+//   // ..
+
+//   // static 변수
+//   static history = "기원전 3000년 전";
+
+//   // static 함수
+//   static brewing() { // 양조(만드는 법)
+//     return "밀, 홉, 효모, 물 등";
+//   }
+// }
+
+// // 호출
+// console.log(Beer.history);
+// console.log(Beer.brewing());
+
+
+// 내장된 클래스의 static 속성
+// console.log(Math.PI);
+
+
+// 완성된 Beer클래스
+
+// class Beer {
+//   name;
+//   origin;
+//   available;
+
+//   constructor (name, origin, available) {
+//     this.name = name;
+//     this.origin = origin;
+//     this.available = available;
+//   }
+
+//   drink() {
+//     return "시원하다!";
+//   }
+
+//   static history = "기원전 3000년 전";
+
+//   static brewing() {
+//     return "밀, 홉, 효모, 물";
+//   }
+// }
+
+
+/*
+  Q. 클래스
+  다음을 만족하는 <Car>클래스를 선언해보세요
+
+  - 변수 멤버
+  1 name
+  2 brand (브랜드)
+  3 color
+
+  - 생성자 있음
+
+  - 함수 멤버
+  1 sound (배기음)
+  자동차 소리를 리턴한다
+
+  - static 함수
+  1 getAge
+  구매 연도를 입력하면 차의 나이를 알려준다
+*/
+
+
+// class Car {
+//   // 변수 멤버
+//   name;
+//   brand;
+//   color;
+
+//   // 생성자
+//   constructor (name, brand, color) {
+//     this.name = name;
+//     this.brand = brand;
+//     this.color = color;
+//   }
+
+//   // 함수 멤버
+//   sound() {
+//     return "부릉";
+//   }
+
+//   // static 함수
+//   static getAge(y) {
+//     return "차의 나이: " + (2024 - y);
+//   }
+// }
+
+// // 인스턴스
+// var car = new Car("GV80", "제네시스", "블랙");
+
+// console.log(car);
+
+// // 메서드
+// console.log(car.sound());
+
+// // static 함수 호출
+// console.log(Car.getAge(2022));
+
+
+/*
+  자바스크립트에 내장된 클래스
+
+  1 문자처리: String
+  2 숫자 및 날짜: Number, Math, Date
+  3 컬렉션: Array
+  4 에러: SyntaxError, ReferenceError, 기타 에러
+  5 기타: Promise, JSON, Object
+*/
+
+// 내장된 클래스 활용 예시
+
+// 현재 시간
+// var time = new Date().toLocaleDateString();
+// 수학관련 데이터
+// var PI = Math.PI;
+
+
+/*
+  넓은 의미에서 자바스크립트에서의 객체
+
+  1 예
+  2 리터럴 표기법
+*/
+
+
+// 1 예
+// 넓은 의미에서 모든 값은 객체이다
+
+// var foo = "bar"; // 객체
+
+// // 메서드 호출
+// console.log(foo.toUpperCase());
+
+
+// 2 리터럴 표기법
+
+// String 클래스의 인스턴스
+
+// var foo = "bar"; // 우항에 값만 작성 - 리터럴 표기법
+// var foo = new String("bar");
+
+
+// 리터럴 표기 불가
+// var date = new Date();
+
+// console.log(date);
+
+
+/*
+  에러와 예외
+
+  1 에러 
+  2 예외
+*/
+
+
+/*
+  에러 (Error)
+  
+  debugging (bug를 잡는다)
+
+  에러는 프로그램을 중단시킨다
+  에러는 반드시 고쳐야 한다
+*/
+
+
+// console.log(foo);
+// name: ReferenceError
+// message: foo is not defined
+// stack: 나머지
+
+
+/*
+  예외 (Exception)
+
+  의도적으로 발생시키는 에러 (필요한 경우)
+
+  예) 인증절차
+*/
+
+
+// 사용자가 로그인을 시도할때 입력한 비밀번호
+// var input = "12";
+// // 올바른 비밀번호
+// var password = "123";
+
+// // 인증실패 처리
+// if (input != password) {
+//   // 예외를 던진다(throw)
+//   throw "비밀번호가 일치하지 않습니다";
+// }
+
+
+// 예외 처리
+// try / catch 구문
+
+// var password = "123";
+// var input = "12";
+
+// try { // 코드 작성
+//   if (input != password) {
+//     throw "비밀번호가 일치하지 않습니다";
+//   }
+  
+//   // 실행되지 않는다
+//   console.log("로그인 성공");
+
+// } catch (error) { // 에러 처리
+//   console.log("로그인 실패:", error);
+// }
+
+
+
+/*
+  비동기 작업
+  프로그램에서 블로킹(blocking)을 방지하기 위해 사용된다
+  예) 서버에서 데이터를 가져올 때
+  
+  * blocking - 중단, 정체
+
+  1 동기 작업
+  2 비동기 작업
+*/
+
+
+// 동기 작업 (Synchronous operation)
+// 작업이 순서대로 실행된다
+
+// function f() {
+//   console.log("작업 1");
+// }
+
+// f();
+// console.log("작업 2");
+
+
+
+// 비동기 작업(Asynchronous operation)
+// 빠른 작업부터 실행된다
+
+// 서버에서 데이터를 가져오는 과정 (가정)
+
+// 서버에 데이터를 요청하는 함수
+// function getData(callback) {
+//   // 서버에서 데이터를 가져오는데 1초가 걸린다고 가정
+//   setTimeout(function () {
+//     callback(null, "야옹");
+//   }, 1000);
+// }
+
+// // 데이터 요청
+// getData(function (err, data) {
+//   if (err) {
+//     return console.error(err);
+//   }
+
+//   console.log("서버에서 전달받은 데이터:", data);
+// });
+
+// console.log("다음 작업");
+
+
+/*
+  JSON
+
+  1 JSON 개념
+  2 JSON.stringify
+  3 JSON.parse
+*/
+
+
+/*
+  JSON 개념
+
+  JavaScript Object Notation(자바스크립트 객체 표기법)의
+  약자.
+  객체를 저장하거나 전송하기 위한 텍스트 포맷
+*/
+
+
+// var cat_json = '{ "name": "치즈" }';
+
+// console.log(typeof cat_json); // string
+
+
+
+// JSON.stringify()
+// 객체를 JSON으로 변환한다
+
+// 객체
+// var cat = { name: "치즈" };
+
+// var cat_json = JSON.stringify(cat);
+
+// console.log(cat_json);
+// // '{ "name": "치즈" }'
+// console.log(typeof cat_json);
+// // string
+
+
+// JSON.parse()
+// JSON을 객체로 변환한다
+
+
+
+// var cat_json = '{ "name": "치즈" }';
+
+// var cat = JSON.parse(cat_json);
+
+// console.log(cat); // 객체
+// console.log(typeof cat); // object
