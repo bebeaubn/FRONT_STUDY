@@ -1576,6 +1576,280 @@ console.log(arr);
 //10 , 20, 30   <-- 오름차순 배열로 바뀜
 
 
+/* 문제
+ Q. 배열 메서드
+
+ 자동차 리스트에 마지막에 새 자동차를 추가해보세요 
+ */
+
+ var cars = ["스타리아","아반떼","아이오닉6"]
+ var newCar = "캐스퍼";
+
+ // 문제풀이
+
+ var r = cars.concat(newCar);
+
+ console.log(r);
+
+ //강사님 풀이
+
+ cars.push(newCar);
+
+ console.log(cars);
+ 
+ // 배열안에 새로운 아이템을 추가하는거라 push로 써여함
+
+
+ /*
+  Q2 배열 메서드
+
+  아시아 자동차 리스트(배열)을 만들어보세요
+
+*/
+
+// 문제풀이
+var KoreaCars = ["현대", "기아"];
+var japanessCars = ["렉서스", "닛싼","토요타"];
+
+var r = KoreaCars.concat(japanessCars);
+
+console.log(r);
+
+//강사님 문제풀이
+
+var KoreaCars = ["현대", "기아"];
+var japanessCars = ["렉서스", "닛싼","토요타"];
+
+var asianCars = KoreaCars.concat(japanessCars);
+
+console.log(asianCars);
+
+/*
+ 배열 순회 (loop)
+ 배열에 특정한 작업을 수행한다
+
+
+ 1 배열의 각아이템 업데이트 하기
+ 2 배열 필터링하기
+
+ */
+
+ //1 배열의 각 아이템 업데이트
+ // 각 아이템에 10을 곱해야 하는경우
+
+var arr = [10, 20, 30];
+
+//변수 i를 인덱스로 활용한다
+for(var i = 0; i<arr.length; i++) {
+  console.log(arr[i] * 10);
+}
+
+// 2 배열 필터링
+// 성인만 출력해야하는 경우
+
+var ages = [12, 19, 23, 30];
+
+for(var i = 0; i < ages.length; i++) {
+  if(ages[i] >= 18){
+    console.log(ages[i]);
+  }
+}
+
+
+/*
+Q1 배열 순회
+각 브랜드의 이름을 대문자로 출력해보세요
+*/
+
+// 정답
+
+var brands = ["apple", "samsung", "huawei"];
+
+for (var i =0; i < brands.length; i++){
+  console.log(brands[i].toUpperCase());
+}
+
+/*
+Q2. 배열 순회
+
+b로 시작하는 아이템을 출력해보세요
+
+결과 : 
+bar
+baz
+
+*/
+// var arr = ["foo", "bar", "baz"];
+
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i][0] == "b") {
+//     console.log(arr[i]);
+//   }
+// }
+
+
+// var cars = ["그랜저", "소나타", "캐스퍼"];
+
+// var r = cars.join("와 ");
+
+// console.log(r);
+// console.log(typeof r);
+// // 그랜저, 소나타, 캐스퍼
+
+
+// var cars = ["레이", "카니발", "K6"];
+
+// var r = cars.includes("싼타페"); // 포함여부
+
+// console.log(r);
+// // false
+
+
+var cars = ["레이", "카니발", "K6"];
+
+var r = cars.indexOf("카니발");
+
+console.log(r);
+// 1
+
+
+//2월13일
+/* 객체 (Object)
+ 데이터와 함수의 집합
+ 데이트를 다루기 위한 기본 단위로 활용된다
+
+
+ 1.구조
+ 2.기본사용방법
+
+*/
+
+/*
+
+구조 
+1 속성(property)
+객체가 가진 데이터
+key와 value로 구성된다.
+
+2 메서드 (methods)
+속성중에서 값 (value)이 함수인것을 특별히 메서드라고 부른다
+
+*/
+
+
+var cat = {
+  // key : value
+name : "치즈",
+home : null,
+sound : function(){  // 메서드
+  return "야옹";
+}
+}
+
+
+console.log(cat);
+
+/* Q . 객체의 구조
+
+"korea"라는 이름의 객체를 선언해보세요
+
+- 속성
+1 수도 (capital city)
+값 : 서울
+타입 : 문자열
+
+
+2 인구(population)
+값  : 5000
+타입 : number
+
+3 언어(languge)
+값 : 한국어
+타입 : 문자열
+
+4 G7 여부
+값 : 아니오
+타입 : Boolean
+
+- 메서드
+1  K - pop 재생기능
+케이팝 음악을 재생한다
+
+*/
+
+var korea = {
+  capitalCity: "서울",
+  populaton: 5000,
+  language : "한국어",
+  isG7 : false,
+  kpop : function (){
+    return "내가 만든 쿠키" 
+  }
+}
+
+console.log(korea);
+
+// 1 속성에 접근
+
+var cat ={
+  name: "치즈",
+  home: null,
+  sound : function () {
+    return "야옹";
+  }
+}
+
+// name
+
+console.log(cat.name);  //치즈
+console.log(cat["name"]); //치즈
+
+//home
+console.log(cat.home); // null
+
+//없는 속상에 접근 시도
+console.log(cat.color);  //undefined
+
+//메서드 호출
+console.log(cat.sound());  //야옹
+
+
+// 2 소성 추가 / 수정
+var cat ={
+  name: "치즈",
+  home: null,
+}
+/*새롭게 값을 추가하고 메서드 추가하는거 잘 봐야함*/
+
+//속성추가
+cat.age = 2;
+
+//메서드 추가 (함수 표현식)
+cat.sound = function () {
+  return"야옹";
+}
+
+console.log(cat);
+
+// 속성 수정
+cat.home = "삼산동";
+
+console.log(cat)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

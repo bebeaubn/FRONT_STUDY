@@ -1,4 +1,6 @@
-# JavaScript 1 
+   # JavaScript 이론
+
+   ### JavaScript 1 
 
 
    ### 기본 사용법
