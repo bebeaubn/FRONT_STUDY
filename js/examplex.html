@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 예제</title>
+</head>
+<body>
+
+
+  <!-- <h1>구독버튼</h1>
+
+  <button id="btn">구독하기</button>
+
+  <script>
+    var btn = document.getElementById("btn");
+    var subscribed = false;
+
+    btn.addEventListener("click", handleClick);
+
+    function handleClick() {
+      // 눈으로 확인 (변수 추적)
+      console.log(subscribed);
+
+      if (!subscribed) { // 구독중으로 업데이트
+        btn.textContent = "구독중";
+        subscribed = true;
+      } else { // 구독하기로 업데이트
+        btn.textContent = "구독하기";
+        subscribed = false;
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>좋아요 버튼</h1>
+
+  <style>
+    #btn {
+      width: 2rem;
+      cursor: pointer;
+      fill: #ddd;
+    }
+    
+    #btn.active {
+      fill: #e00;
+    }
+  </style>
+
+
+  <svg 
+    id="btn" 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 512 512"
+  >
+    <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/>
+  </svg>
+
+
+  <script>
+    var btn = document.getElementById("btn");
+    var liked = false;
+
+    btn.addEventListener("click", handleClick);
+
+    function handleClick() {
+      // 변수 추적
+      console.log(liked);
+      
+      if (liked) {
+        btn.classList.remove("active");
+        liked = false;
+      } else {
+        btn.classList.add("active");
+        liked = true;
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>비밀번호 보기 버튼</h1>
+
+  <style>
+    .container {
+      position: relative;
+      width: 16rem;
+    }
+
+    #input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+
+    #btn {
+      /* position */
+      position: absolute;
+      top: 0;
+      right: 0;
+      /* size */
+      height: 100%;
+      /* design */
+      border: none;
+      background-color: transparent;
+      padding: 0 1rem;
+      font-weight: 600;
+      /* misc */
+      cursor: pointer;
+    }
+  </style>
+
+
+  <div class="container">
+    <input id="input" type="password" value="1234">
+    <button id="btn">Show</button>
+  </div>
+
+
+  <script>
+    var input = document.getElementById("input");
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener("click", handleClick);
+
+    function handleClick() {
+      // 타입 체크
+      console.log(input.type);
+
+      if (input.type == "text") {
+        input.type = "password";
+        // this = btn
+        this.textContent = "Show";
+      } else {
+        input.type = "text";
+        this.textContent = "Hide";
+      }
+    };
+  </script> -->
+
+
+  <!-- <h1>더보기 버튼</h1>
+
+  <style>
+    #btn {
+      color: #888;
+      cursor: pointer;
+    }
+  </style>
+
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing<span id="dots">...</span>
+  </p>
+
+  <span id="btn">더보기</span>
+
+
+  <script>
+    var dots = document.getElementById("dots");
+    var btn = document.getElementById("btn");
+    
+    btn.addEventListener("click", handleClick);
+
+    function handleClick() {
+      // 나머지 내용
+      var data = ` elit. Odit architecto tenetur libero, 
+      eos deleniti ratione repudiandae perspiciatis culpa expedita, 
+      debitis a ipsa corporis cumque cum. Sunt iure nam unde facilis!`;
+
+      /// ...을 나머지 내용으로 바꾼다
+      dots.textContent = data;
+
+      // 버튼 제거
+      btn.remove();
+      // 엘리먼트.remove() - 엘리먼트를 제거한다
+    };
+  </script> -->
+
+
+  <!-- <h1>탑버튼</h1>
+
+  <style>
+    body {
+      /* 
+        calc() 함수
+        계산된 값을 적용할 수 있다
+      */
+      height: calc(100vh + 200px);
+    }
+
+    #btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 512 512"
+    id="btn"
+    class="hidden"
+  >
+    <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM385 231c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-71-71V376c0 13.3-10.7 24-24 24s-24-10.7-24-24V193.9l-71 71c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 119c9.4-9.4 24.6-9.4 33.9 0L385 231z"/>
+  </svg>
+
+  <script>
+    var btn = document.getElementById('btn');
+
+    // document = HTML 문서
+    // scroll - 스크롤 
+    document.addEventListener('scroll', handleScroll);
+    // 탑버튼을 클릭했을 때
+    btn.addEventListener("click", handleClick);
+
+    function handleScroll() {
+      // this = document
+      // scrollTop - 뷰포트탑과 문서탑 사이의 거리
+      var scrollTop = this.documentElement.scrollTop;
+
+      console.log("scroll top:", scrollTop);
+
+      if (scrollTop > 100) { // 충분히 스크롤한 경우
+        // 탑버튼을 나타나게 한다
+        btn.classList.remove("hidden");
+      } else { // 충분히 스크롤하지 않은 경우
+        // 탑버튼을 숨긴다
+        btn.classList.add("hidden");
+      }
+    };
+
+    function handleClick() {
+      // 제일 위로 이동
+      document.documentElement.scrollTop = 0;
+    };
+  </script> -->
+
+  <!-- <h1>script에서 버튼 비활성화</h1>
+
+  <button id="btn">button</button>
+
+  <script>
+    var btn = document.getElementById("btn");
+
+    btn.disabled = true;
+  </script> -->
+
+
+  <!-- <h1>카트 추가 버튼</h1>
+
+  <style>
+    #btn {
+      /* layout */
+      display: flex;
+      align-items: center;
+      /* design */
+      background-color: #e00;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+    }
+  
+    .icon {
+      width: 1rem;
+      fill: #fff;
+    }
+  
+    .text {
+      margin-left: 0.5rem;
+    }
+  
+    #btn:disabled {
+      /* 불투명도 */
+      opacity: 0.5;
+    }
+  </style>
+  
+  <button id="btn">
+    <svg 
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 576 512"
+    >
+      <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+    </svg>
+    <span class="text">Add To Cart</span>
+  </button>
+
+  <script>
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function () {
+      alert("추가되었습니다"); // 메시지
+
+      // 버튼 비활성화
+      this.disabled = true;
+    })
+  </script> -->
+
+
+  <!-- <style>
+    header {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 100%;
+      /* design */
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #btn {
+      border: none;
+      background-color: transparent;
+      font-size: 2rem;
+    }
+
+    #nav {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .link {
+      display: block;
+      padding: 0.5rem;
+      text-align: center;
+      color: #000;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <header>
+    <div class="header-inner">
+      <button id="btn">&#9776;</button>
+    </div>
+    <nav class="hidden" id="nav">
+      <ul>
+        <li>
+          <a href="#" class="link">Link</a>
+        </li>
+        <li>
+          <a href="#" class="link">Link</a>
+        </li>
+        <li>
+          <a href="#" class="link">Link</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Top navigation</h1>
+  </main>
+
+
+  <script>
+    var btn = document.getElementById("btn");
+    var nav = document.getElementById("nav");
+
+    // 메뉴버튼을 클릭했을 때
+    btn.addEventListener("click", function () {
+      // toggle - 클래스가 있으면 제거, 없으면 추가한다
+      nav.classList.toggle("hidden");
+    })
+
+
+    // document(경기장) - 이벤트 감지 가능 영역
+    document.addEventListener("click", function (e) {
+      // e.target(손흥민의 좌표) - 실제 이벤트가 발생한 엘리먼트
+      console.log("event target:", e.target);
+
+      // 도큐먼트에서 메뉴 버튼을 제외한 부분을 클릭했을 때
+      if (e.target !== btn) {
+        nav.classList.add("hidden");
+      }
+    })
+  </script> -->
+
+
+  <!-- 스크롤에 따라 배경 사이즈 바뀌는거
+  <style>
+    body{
+      height: calc(100vh +200px);
+      margin: 0;
+    }
+
+    #header{
+      /*position*/
+      position: fixed;
+      top: 0;
+      left: 0;
+      /*size*/
+      width: 100%;
+      /*design*/
+      color: #ffff;
+      transform: all 0.5s;
+    }
+
+    .logo{
+      text-align: center;
+    }
+
+    .bg-image{
+      background-image: linear-gradient(toright,#222 , #000);
+    }
+      </style>
+
+      <header id="header">
+        <h3 class="logo">transparent NavBar</h3>
+    </header>
+
+    <div class="bg-image"></div>
+
+    <script>
+      var header = document.getElementById('header');
+      document.addEventListener('scroll', handleScroll);
+
+      function handleScroll() {
+        // 뷰 포트압과 문서탑 사이이 거리 
+        var scrollTop = document.documentElement.scrollTop;
+
+        console.log("scrollo top : ", scrollTop);
+
+        if(scrollTop > 100) {  // 충분히 스크롤한 경우
+          header.classList.add('active');
+        } else {  // 충분히 스크롤 하지 않은경우 
+          header.classList.remove('active');
+        }
+      }
+
+
+
+    </script>
+
+  -->
+
+  /*버튼 클랙했을때 이동해서 로고 및 링크나오게 하는거*/
+  <!--
+  <style>
+    #side-bar{
+      /*position*/
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      /*size*/
+      width: 16rem;
+      height: 100vh;
+      /*design*/
+      background-color: #fff;
+      /*misc*/
+      transition: left 0.2s;
+    }
+
+    .logo{
+      padding: 1rem;
+    }
+
+    .link{
+      color: #000;
+    }
+
+    #overlay{
+      /*position*/
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /*design*/
+      background-color: rgb(0 0 0 / 0.2);
+
+    }
+
+    #side-bar.hidden{
+      left: -16rem;
+    }
+
+    #overlay.hidden{
+      display: none;
+    }
+  </style>
+
+  <h1>Side bar</h1>
+
+  <button id="'btn">Open</button>
+
+  <nav id="side-bar" class="hidden">
+    <h1 class="logo">LOGO</h1>
+
+    <ul>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="overlay" class="hidden"></div>
+
+
+  <script>
+    var btn = document.getElementById("btn");
+    var sideBar = document.getElementById("side-bar");
+    var overlay = document.getElementById("overlay");
+
+    // 열기버튼 클릭
+
+    btn.addEventListener("click", function () {
+      sideBar.classList.remove("hidden");
+      overlay.classList.remove("hidden");
+    })
+
+    //오버레이를 클릭 했을떄
+    btn.addEventListener("click", function () {
+      sideBar.classList.remove("hidden");
+      this.classList.remove("hidden");
+
+    })
+  </script>
+  // 왜 로고로 안넘어가 하..쉬바
+-->
+  
+/*왼쪽값 안보이게 하는거,왼쪽에 x 창 뜨게 하기*/
+
+<!--
+<style>
+  #side-bar{
+    /*position*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /*size*/
+    width: 100%;
+    height: 100%;
+    /*design*/
+    background-color: #ffff;
+    /*misc*/
+    transition: left 0.2s;
+  }
+
+  .logo{
+    padding: 1ram;
+  }
+
+  .link{
+    color: #000;
+  }
+
+  #close-btn{
+    /*position*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*design*/
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    /*misc*/
+    cursor: pointer;
+  }
+
+  #side-bar.hidden{
+    left: -100vw;
+  }
+</style>
+
+-->
+<!--
+
+<h1>Side bar</h1>
+
+<button id="open-btn">Open</button>
+
+<nav id="side-bar" class="hidden">
+  <h1 class="logo">LOGO</h1>
+  <span id="close-btn">&item</span>
+  <ul>
+    <li>
+      <a href="#" class="link">Link</a>
+    </li>
+    <li>
+      <a href="#" class="link">Link</a>
+    </li>
+    <li>
+      <a href="#" class="link">Link</a>
+    </li>
+  </ul>
+</nav>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  var sideBar = document.getElementById("side-bar");
+  var openBtn = document.getElementById("open-btn");
+  var CloseBtn = document.getElementById("close-btn");
+
+  //열기버튼 클릭
+  openBtn.addEventListener("click", function (){
+
+  });  
+
+})
+
+// 닫기 버튼 클릭
+closeBtn.addEventListener("click", function () {
+  sideBar.classList.add("hidden");
+})
+</script>
+
+
+<style>
+body {
+  min-height: calc(100vh + 200px);
+}
+
+#header {
+  /* position */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* size */
+  width: 100%;
+  height: 3rem;
+  /* layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* design */
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  /* misc */
+  transition: top 0.2s;
+}
+
+#header.hidden {
+  top: -3rem;
+}
+
+.content {
+  color: #ddd;
+  font-size: 4rem;
+}
+</style>
+
+-->
+<!--
+<header id="header">
+Switch Header
+</header>
+
+<h1 class="content">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Delectus nobis commodi sit est nesciunt labore laboriosam 
+inventore eveniet! Nemo qui suscipit maxime. 
+Vel veritatis cumque ipsam quam, ducimus distinctio itaque?
+</h1>
+
+
+<script>
+var header = document.getElementById("header");
+var prevScrollTop = 0;
+
+document.addEventListener("scroll", handleScroll);
+
+function handleScroll() {
+  var scrollTop = document.documentElement.scrollTop;
+
+
+  // 이전 시점의 변수값에 접근 (prevScrollTop)
+  // 그 전값이랑 똑같으면 스크롤 내리는중 아님
+  // 그전 값이랑 차이가 나면서 스크롤이 올라가는지 안올라가는지 볼수있음
+  // 자주 사용되는 거임 중요
+  console.log("이전 스크롤탑:", prevScrollTop);
+  console.log("현재 스크롤탑:", scrollTop);
+
+  if (scrollTop > prevScrollTop) { // 스크롤을 내리는 중
+    header.classList.add("hidden");
+  } else { // 스크롤을 올리는 중
+    header.classList.remove("hidden");
+  }
+
+  // 대입 시점
+  prevScrollTop = scrollTop;
+}
+</script> 
+
+
+      // 접근 시점과 대입값이 같아지면 안됨, 중요한 패턴, 변수값이 같아지면 노노 
+
+      // 대입시점 
+      preScrolltop = scrollTop;
+    )}
+
+  
+</script>
+
+-->
+
+<!-- <h1>실시간 검색</h1>
+
+  <style>
+    #input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      padding: 0.5rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <input type="search" name="" id="input" placeholder="Search">
+  
+  <ul>
+    <li class="item">guinness</li>
+    <li class="item">heineken</li>
+    <li class="item">budwiser</li>
+    <li class="item">kloud</li>
+    <li class="item">asahi</li>
+  </ul>
+
+  <script>
+    var input = document.getElementById("input");
+    var items = document.getElementsByClassName("item");
+
+    // keyup - 키에서 손가락을 뗄 때
+    input.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup() {
+      // 검색어를 소문자로 변환한 값
+      var q = this.value.toLowerCase();
+      // 대소문자를 가리지 않는 검색 기능
+
+      console.log("검색어:", q);
+
+      // 아이템 중에서 검색어를 포함하지 않은 아이템은 숨긴다
+
+      for (var i = 0; i < items.length; i++) {
+        // 각각의 아이템
+        var item = items[i];
+  
+        // 검색어를 포함한 경우
+        if (item.textContent.indexOf(q) > -1) {
+          item.classList.remove("hidden");
+        } else { // 검색어를 포함하지 않은 경우
+          item.classList.add("hidden");
+        }
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>댓글 버튼</h1>
+
+  <input type="text" name="" id="input">
+  <button id="btn" disabled>Send</button>
+
+
+  <script>
+    var input = document.getElementById("input");
+    var btn = document.getElementById("btn");
+
+    input.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup() {
+      console.log("댓글:", this.value);
+
+      if (this.value == "") { // 내용이 없을 때
+        btn.disabled = true;
+      } else { // 내용이 있을 때
+        btn.disabled = false;
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>실시간 유효성 검사</h1>
+
+  <style>
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    #input {
+      width: 20rem;
+      box-sizing: border-box;
+      padding: 0.5rem;
+    }
+
+    .success {
+      color: #0a0;
+    }
+
+    .warning {
+      color: #f00;
+    }
+  </style>
+
+  <label for="input">Password</label>
+  <input type="text" id="input">
+
+  <p id="message"></p>
+
+  <script>
+    var input = document.getElementById('input');
+    var message = document.getElementById("message");
+    // 정규식
+
+    // 소문자를 포함하는지 확인하기 위한 패턴
+    var lowerCasePatt = /[a-z]/
+    // 대문자 포함 여부
+    var upperCasePatt = /[A-Z]/
+    // 숫자 포함 여부
+    var numberPatt = /[0-9]/
+
+    /*
+      정규식 (Regular Expression)
+
+      문자열을 검사하기 위한 패턴
+      검사를 이행하기 위한 몇가지 메서드를 가지고 있다
+
+      1 값
+      /패턴/
+
+      2 메서드
+      test(검사할 문자열) - 검사 결과에 따라 Boolean 값을 리턴한다
+    */
+
+    input.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup() {
+      var password = this.value;
+
+      console.log("password:", password);
+
+      try {
+        if (!password) {
+          throw '비밀번호는 필수입니다';
+        }
+
+        if (!lowerCasePatt.test(password)) {
+          throw "최소 한개 이상의 소문자를 포함해야 합니다";
+        }
+
+        if (!upperCasePatt.test(password)) {
+          throw "최소 한개 이상의 대문자를 포함해야 합니다";
+        }
+
+        if (!numberPatt.test(password)) {
+          throw "최소 한개 이상의 숫자를 포함해야 합니다";
+        }
+
+        if (password.length < 8) {
+          throw "비밀번호는 8글자 이상이어야 합니다";
+        }
+
+        message.innerHTML = `<span class="success">안전한 비밀번호 입니다</span>`;
+
+      } catch (error) {
+        message.innerHTML = `<span class="warning">${error}</span>`;  
+      } 
+    }
+  </script> -->
+
+
+  <!-- <h1>뉴스레터 폼</h1>
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    input {
+      padding: 0.5rem;
+      flex-grow: 1;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <form action="/server" id="form">
+    <div class="container">
+      <input type="text" name="email" placeholder="johnDoe@example.com">
+      <button class="btn">Subscribe</button>
+    </div>
+  </form>
+
+  <p id="done" class="hidden">
+    Thank you for subscribing us!
+  </p>
+
+
+  <script>
+    var form = document.getElementById("form");
+    var done = document.getElementById("done");
+    // 이메일 검사 패턴
+    var patt = /[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/
+
+    // submit - 폼 제출
+    form.addEventListener("submit", handleSubmit);
+
+    function handleSubmit(e) {
+      // 서버 요청 취소
+      e.preventDefault();
+
+      /*
+        preventDefault()
+
+        이벤트의 기본 행위를 취소한다
+        submit 이벤트의 기본 행위는 서버에 요청을 전송하는 것이다.
+        submit 이벤트의 기본 행위 취소는 클라이언트측 유효성 검사
+        또는 AJAX 요청시에 이행된다
+
+        * AJAX 요청 - 새로고침없이 서버에 요청을 전송하는 기술
+      */
+
+      // 유저가 입력한 이메일에 접근
+      var email = form.elements["email"].value;
+      // form.elements[name] - name(애트리뷰트)으로 폼데이터에 접근한다
+
+      try {
+        if (!patt.test(email)) {
+          throw "올바른 이메일을 입력하세요";
+        }
+        
+        // 폼을 숨기고
+        form.classList.add("hidden");
+        // 땡큐메시지를 보여준다
+        done.classList.remove("hidden");
+      
+      } catch (error) {
+        // 에러 메시지
+        alert(error)
+      }
+    }
+  </script> -->
+
+<!--
+  <h1>컨택 폼</h1>
+
+  <script>
+    // 이름 검사 패턴
+    var fnamePatt = /^[a-zA-Z]+$/;
+    // 성 검사 패턴
+    var lnamePatt = /^[a-zA-Z]+$/;
+    // 핸드폰 번호 검사 패턴 (숫자만 가능)
+    var phonePatt = /^\d{5,11}$/;
+  </script>
+-->
+
+
+
+<!---
+<h1>컨택폼</h1>
+<style>
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .col-span-2{
+    grid-column-start: span 2;
+  }
+
+  label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25ram;
+  }
+
+  input{
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  button{
+    margin-top: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .hidden{
+    display: none;
+  }
+</style>
+
+<form action="" id="from">
+  <div class="container">
+    <div class="form-group">
+      <label for="fname">First name</label>
+      <input type="text" id="fname"
+      name="fname" placeholder="John">
+
+      <div class="form-group">
+        <label for="lname">Last name</label>
+        <input type="text" id="name"
+        name="lname" placeholder="Doe">
+      </div>
+
+      <div class="form-group col-span-2">
+        <label for="phone">Phone</label>
+        <input for="text" id="number"
+        name="phone" placeholder="">
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    // 이름 검사 패턴
+    var fnamePatt = /^[a-zA-Z]+$/;
+    // 성 검사 패턴
+    var lnamePatt = /^[a-zA-Z]+$/;
+    // 핸드폰 번호 검사 패턴 (숫자만 가능)
+    var phonePatt = /^\d{5,11}$/;
+
+    from,addEventListener("submit",handleSubmit);
+
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      //유저가 입력한 값에 접근
+      var fname = from.elements["fname"]
+    }
+
+    //유효성 검사
+    try{
+
+      //fist name check
+      if(!fnamePatt.test(fname)){
+        throw "Invalid first name";
+      }
+
+      //last name check
+      if(!fnamePatt.test(lname)){
+        throw"Invalid last name";
+      }
+
+      //phone check
+      if(!phonePatt.test(phone)){
+        throw "Invalid phone number";
+      }
+
+      // 폼을 숨기고 땡큐 메세지를 보여준다
+      from.classList.add("hidden");
+      done.classList.remove("hidden");
+
+    } catch (error){
+      alert(error)
+    }
+  </script>
+</form>
+
+
+--> 
+ 2월 22일 강의 중요한 부분 
+<h1>갤러리</h1>
+// 사진이 아래에 있고 그 사진위에 호버하면 사진이 넘어가는 효과, 사진을 크게 보여준다
+// 나는 왜 안됨??? 딥빡 사진이 왜 안나오냐... 하하하하하 
+
+<style>
+  .container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  #main{  /*컨테이너 안에있는 메인 이미지*/
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+
+  .thumbnails {  /*썸네일즈 크기 */
+    /*size*/
+    width:300px;
+    height: 100px;
+    /*layout*/
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0 1fr));
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .photo{  /*각각의 이미지 사이즈 아이템 크기에 맞춤*/
+    /*size*/
+    width: 100%;
+    height: 100%;
+    /*misc*/
+    object-fit: cover;
+    /*effect*/ /*선택된 이미지를 제외하고 불투명하게, 선택한 이미지는 선명*/
+    opacity: 0.8;
+  }
+
+  .prev-btn, .next-btn{
+    /*position*/
+    position: absolute;
+    height: 100%;
+    top: 0;
+    /*design*/
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent; 
+    color: rgba(255 255 255 / 0.5);
+    font-size: 2rem;
+  }
+
+  .prev-btn {
+    left: 0;
+  }
+
+  .next-btn{
+    right: 0;
+  }
+
+  .active{
+    opacity: 1;
+  }
+</style>
+
+<h1>Gallery</h1>
+
+<div class="container">
+  <img src="http:/tvvmvn.github.io/front-end/img/Simba.webp" alt="" id="main">
+  <button class="prev-btn" onclick="walk(-1)">&#10094;</button>
+  <button class="next-btn" onclick="walk(-1)">&#10095;</button>
+</div>
+<div class="thumbnails">
+  <img class="photo active" src="Simba.webp" onclick="jump(0)" alt="">
+  <img class="photo" src="Timon.webp" onclick="jump(1)" alt="">
+  <img class="photo" src="Pumba.webp"  onclick="jump(2)" alt="">
+</div>
+
+
+<script>
+  var photos = document.getElementsByClassName("photo");
+  var main = document.getElementById("main");
+  var firstIndex = 0;
+  var lastIndex = photos.length -1;  // 2 
+  // photo index
+  var index = 0;
+
+  // 버튼을 클릭했을떄 
+  function walk(data) {
+    index += data; 
+    
+    //인덱스 값이 0에서 2 사이의 값을 갖도록 만든다
+
+    if(index < firstIndex) index = lastIndex;
+    if(index > lastIndex) index = firstIndex;
+    // 아래코드가 0이였을때 2가 되게하는 코드 , 위에코드는 2였을때 0이 되게한다
+
+    //썸네일에 접근하기 위한 index
+    console.log("index" , index);
+
+
+    //index도 제한이 있어야 함 (이미지 갯수만큼 0,1,2)
+    console.log("index", index);
+    // 인덱스값이 증가 감소하면서 이미지 변경되는 사항 저장됨
+
+    //메인 이미지 업데이트
+    setImage();
+    // 썸네일 효과
+    setActive();
+  }
+
+  //썸네일을 클릭했을때
+  function jump(data){}
+
+  //메인 이미지 업데이트 처리
+  function setimage() {
+    // 특정 썸네일의 소스를 메인 이미지 소스에 전달한다
+    main.src = photos[index].src;
+  }
+
+  //썸네일 효과 처리
+
+  function setActive() {
+    for(var i =0; i < photos.length; i++){
+      if(i == index){  // index 변수와 일치하는 인덱스(변수 i )의 썸네일인 경우
+        photos[i].classList.add("active");
+      } else{  // 나머지 썸네일
+        photos[i].classList.remove("active")
+      }
+    }
+  }  
+
+</script>
+
+
+
+
+
+</body>
+</html>
