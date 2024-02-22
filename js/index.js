@@ -2392,4 +2392,4 @@ var r = arr1.concat(arr2);
 
 // console.log(cat); // 객체
 // console.log(typeof cat); // object
-
+>>>>>>>>> Temporary merge branch 2

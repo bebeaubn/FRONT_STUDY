@@ -1,4 +1,5 @@
-# JavaScript 이론
+<<<<<<<<< Temporary merge branch 1
+   # JavaScript 이론
 
 ### JavaScript 1
 > 기본 이론
@@ -21,34 +22,41 @@
 ### JavaScript 2
 > ES6(새로운 문법이 많이 등장한 버전) 학습
 
-1. let, const
-2. 새로운 메서드
-3. 화살표 함수
-4. 구조분해할당
-5. 스프레드 연산자
-6. 프로미스
+    1. let, const
+    2. 새로운 메서드
+    3. 화살표 함수
+    4. 구조분해할당
+    5. 스프레드 연산자
+    6. 프로미스
+    
+=========
+   # JavaScript 이론
 
-### JavaScript와 HTML
+   ### JavaScript 1 
 
-### 기초
-1. 스크립트 쓰기/디버깅 방법
-2. DOM
-3. window 객체
 
-### 선택자
-1. id 선택자
-2. 클래스 선택자
+   ### 기본 사용법
+   1. 데이터 타입
+   2. 기본 메서드
+   3.  연산자
+   4.  조건문
+   5.  반복문
+   6.  변수
+   7.  함수
+   8. 배열
+   9. 객체
+   10. 클래스
+   11. 에러
+   12. 비동기 작업
+   13. JSON
 
-### 엘리먼트 속성과 메서드
-1. textContent
-2. innerHTML
-3. classList
-4. attribute
-5. createElement
+    # JavaScript 2
 
-### 이벤트
-1. 이벤트와 이벤트 처리
-2. 이벤트 애트리뷰트
-3. 이벤트 객체
-
-### 로컬 스토리지
+    1. let, const
+    2. 새로운 메서드
+    3. 화살표 함수
+    4. 구조분해할당
+    5. 스프레드 연산자
+    6. 프로미스
+    
+>>>>>>>>> Temporary merge branch 2
