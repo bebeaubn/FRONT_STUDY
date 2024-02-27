@@ -1107,7 +1107,7 @@ function handleScroll() {
 <h1>갤러리</h1>
 // 사진이 아래에 있고 그 사진위에 호버하면 사진이 넘어가는 효과, 사진을 크게 보여준다
 // 나는 왜 안됨??? 딥빡 사진이 왜 안나오냐... 하하하하하 
-
+  <!---
 <style>
   .container{
     position: relative;
@@ -1236,10 +1236,605 @@ function handleScroll() {
   }  
 
 </script>
+-->
+/* 시간 변수 - 시간이 흐르는 거  */
+<script>
+ // setInteval(callback, ms) - m마다 callback을 실행한다
+  setInterval(interval, 1000);
+  
+  function interval(){
+    //현재시간 출력
+    console.log(new Data().toLocaleTimeString());
+  }
+    
+
+</script>
+
+/시간이 흐를때마다 사진이 바뀌는 겔러리/
+
+<style>
+  .container{
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  #main{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+
+  .thumbnails {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+
+  }
+  .active{
+    outline: 4px solid #fff;
+    z-index: 1;
+  }
+</style>
+<!--
+<h1>Auto Album</h1>
+/*아ㅏㅏㅏ*/
+<div class="container">
+  <img src="http:/tvvmvn.github.io/front-end/img/Simba.webp" alt="" id="main">
+  <div class="thumbnails">
+    <img class="photo active" src="http:/tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+    <img class="photo" src="http:/tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+    <img class="photo" src="http:/tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+  </div>
+</div>
+
+
+<script>
+  var photos = document.getElementsByClassName('photo');
+  var main = document.getElementById('main');
+  var index = 0;
+
+  setInterval(interval, 3000);
+
+  function interval(){
+    index++;
+    console.log("index",index)
+    
+  }
+</script>
+-->
+
+ <!-- <h1>Carousel</h1>
+
+  <style>
+    #carousel {
+      /* size */
+      width: 200px;
+      height: 200px;
+      /* position */
+      position: relative;
+      /* misc */
+      overflow-x: hidden;
+    }
+
+    #container {
+      /* size */
+      width: 600px;
+      /* layout */
+      display: flex;
+      /* misc */
+      transition: transform 0.2s;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    #prev-btn, #next-btn {
+      /* position */
+      position: absolute;
+      top: 0;
+      height: 100%;
+      /* design */
+      background-color: transparent;
+      border: none;
+      color: rgba(255 255 255 / 0.5);
+      font-size: 2rem;
+    }
+
+    #prev-btn {
+      left: 0;
+    }
+
+    #next-btn {
+      right: 0;
+    }
+
+    .indicator {
+      /* position */
+      position: absolute;
+      bottom: 12px;
+      width: 100%;
+      /* layout */
+      display: flex;
+      justify-content: center;
+    }
+
+    .dot {
+      /* design */
+      display: block;
+      background-color: #fff;
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      margin: 0 2px;
+      /* effect */
+      opacity: 0.5;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  </style>
+
+  <div id="carousel">
+    <div id="container">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="">
+    </div>
+
+    <button id="prev-btn" class="hidden" onclick="main(-1)">&#10094;</button>
+    <button id="next-btn" onclick="main(1)">&#10095;</button>
+
+    <div class="indicator">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+
+  <script>
+    // container and photos
+    var carousel = document.getElementById('carousel');
+    var container = document.getElementById('container');
+    var photos = document.getElementsByClassName("photo");
+    var imageWidth = 200;
+    // index and left
+    var index = 0;
+    var firstIndex = 0;
+    var lastIndex = photos.length - 1;
+    var x = 0;
+    // buttons
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+    // indicator
+    var dots = document.getElementsByClassName('dot');
+
+    // 메인 함수
+    function main(data) {
+      index += data;
+      x = -(index * imageWidth);
+
+      console.log(`index: ${index}, x: ${x}`);
+
+      // 컨테이너 이동
+      setImage();
+      // 버튼 처리
+      setButton();
+      // 인디케이터 처리
+      setIndicator();
+    };
+    
+    // 컨테이너 이동 처리
+    function setImage() {
+      container.style.transform = `translateX(${x}px)`;
+    }
+
+    // 버튼 처리
+    function setButton() {
+      // 이전 버튼
+      if (index == firstIndex) { // 첫번째 이미지일 때
+        prevBtn.classList.add('hidden');
+      } else { // 첫번째 이미지가 아닐 때
+        prevBtn.classList.remove('hidden');
+      }
+  
+      // 다음 버튼
+      if (index == lastIndex) { // 마지막 이미지 일때
+        nextBtn.classList.add('hidden');
+      } else { // 마지막 이미지가 아닐 때
+        nextBtn.classList.remove('hidden');
+      }
+    };
+
+    // 인디케이터 처리
+    function setIndicator() {
+      for (var i = 0; i < dots.length; i++) {
+        if (i == index) {
+          dots[i].classList.add('active');
+        } else {
+          dots[i].classList.remove('active');
+        }
+      }
+    };
+  </script> -->
+
+  <!-- <h1>Modal</h1>
+
+  <style>
+    #overlay {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* design */
+      background-color: rgba(0 0 0 / 0.2);
+    }
+
+    .modal {
+      /* layout */
+      width: 20rem;
+      margin: 100px auto 0;
+      /* design */
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <button id="btn">Open</button>
+
+  <div id="overlay" class="hidden">
+    <div class="modal">
+      <h1>Heading</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Quod, asperiores quam? 
+        Porro, sit cum maiores odio reprehenderit ea, 
+        molestiae quibusdam iusto eos, 
+        id molestias quas ipsam temporibus quo quam distinctio!
+      </p>
+    </div>
+  </div>
+
+
+  <script>
+    var overlay = document.getElementById("overlay");
+    var btn = document.getElementById("btn");
+
+    // 열기 버튼 클릭
+    btn.addEventListener("click", function () {
+      overlay.classList.remove("hidden");
+    })
+
+    // 오버레이 클릭
+    overlay.addEventListener("click", function (e) {
+
+      // 실제 이벤트가 발생한 엘리먼트
+      console.log("event target:", e.target);
+
+      // 클릭한 부분이 모달을 제외한 오버레이일때
+      if (e.target == this) {
+        this.classList.add("hidden");
+      }
+    })
+  </script> -->
+
+
+  <!-- <h1>Q. Modal Gallery</h1>
+
+  <style>
+    #overlay {
+      /* position */
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      /* design */
+      background-color: rgba(0 0 0 / 0.8);
+    }
+
+    .modal {
+      /* layout */
+      margin: 100px auto 0;
+      display: block;
+      /* size */
+      width: 300px;
+      height: 300px;
+    }
+    
+    #modal-image {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+
+    #caption {
+      color: #fff;
+      text-align: center;
+    }
+
+    .thumbnails {
+      display: flex;
+    }
+
+    .photo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .photo:hover {
+      opacity: 1;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+  
+
+  <div id="overlay" class="hidden">
+    <div class="modal">
+      <img id="modal-image" src="" alt="">
+      <h3 id="caption"></h3>
+    </div>
+  </div>
+  
+  <div class="thumbnails">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="Simba" onclick="openModal(0)">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="Timon" onclick="openModal(1)">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="Pumba" onclick="openModal(2)">
+  </div>
 
 
 
+  <script>
+    var overlay = document.getElementById("overlay");
+    var modalImage = document.getElementById("modal-image");
+    var photos = document.getElementsByClassName("photo");
+    var caption = document.getElementById("caption");
 
+    // 썸네일을 클릭했을 때
+    function openModal(index) {
+      console.log("index:", index);
+
+      // 이미지
+      modalImage.src = photos[index].src;
+      // 캡션
+      caption.textContent = photos[index].alt;
+
+      overlay.classList.remove("hidden");
+    }
+
+    // 모달 닫기
+    overlay.addEventListener("click", function () {  
+      this.classList.add("hidden");
+    })
+  </script> -->
+
+
+
+  <!-- <h1>테마 선택</h1>
+
+  <style>
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+
+  <input type="checkbox" id="checkbox" name="">
+  <label for="checkbox">Dark Mode</label>
+
+  <ul id="list">
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul>
+
+  <script>
+    var checkbox = document.getElementById("checkbox");
+    var list = document.getElementById("list");
+
+    // 페이지가 열릴 때
+    document.addEventListener("DOMContentLoaded", handleLoaded);
+
+    // 체크 상태가 바뀔 때
+    checkbox.addEventListener("change", handleChange);
+
+    function handleLoaded() {
+      // 데이터가 없을 경우 null을 리턴한다
+      var darkTheme = localStorage.getItem("darkTheme");
+
+      console.log("darkTheme:", darkTheme);
+
+      if (darkTheme) { // 데이터가 있는 경우
+        list.classList.add("dark-mode"); // 다크모드 적용
+        // 체크박스 동기화
+        checkbox.checked = true;
+      }
+    }
+
+    function handleChange() {
+      console.log("checked:", this.checked);
+
+      if (this.checked) { // 체크됨
+        list.classList.add("dark-mode");
+        // 로컬스토리지 동기화
+        localStorage.setItem("darkTheme", "on");
+      } else { // 안 체크됨
+        list.classList.remove("dark-mode");
+         // 로컬스토리지 동기화
+        localStorage.removeItem("darkTheme");
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>그만보기 버튼</h1>
+
+  <style>
+    .text {
+      color: #ddd;
+    }
+
+    #block-btn, #close-btn {
+      padding: 0.5rem 0.75rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <div id="promotion">
+    <h1 class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Eos eveniet maxime iste vitae odit iure totam quaerat, amet, 
+      minus voluptatum quasi non ipsa libero provident illum, 
+      recusandae nesciunt ratione. Tempore!
+    </h1>
+    <button id="close-btn">닫기</button>
+    <button id="block-btn">더 이상 보지않기</button>
+  </div>
+
+
+  <script>
+    var closeBtn = document.getElementById("close-btn");
+    var blockBtn = document.getElementById("block-btn");
+    var promotion = document.getElementById("promotion");
+
+    // 페이지가 열릴 때
+    document.addEventListener("DOMContentLoaded", function () {
+      var blockedAt = localStorage.getItem("blockedAt");
+
+      if (blockedAt) { // 데이터가 있는 경우
+        promotion.classList.add("hidden");
+      }
+    }) 
+
+    // 닫기 버튼 클릭
+    closeBtn.addEventListener("click", function () {
+      promotion.classList.add("hidden");
+    })
+
+    // 차단 버튼 클릭
+    blockBtn.addEventListener("click", function () {
+      // 오늘 날짜를 문자열 타입으로 리턴한다
+      var date = new Date().toLocaleDateString();
+
+      // 로컬 스토리지 동기화
+      localStorage.setItem("blockedAt", date);
+
+      promotion.classList.add("hidden");
+    })
+  </script> -->
+
+
+  <h1>아코디언</h1>
+
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      margin-bottom: 0.25rem;
+    }
+
+    .btn {
+      /* layout */
+      display: flex;
+      justify-content: space-between;
+      /* size */
+      width: 100%;
+      /* design */
+      padding: 0.5rem;
+      background-color: #eee;
+      border: none;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .btn::after {
+      content: "+";
+    }
+
+    .active .btn::after {
+      content: "-";
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s;
+    }
+
+    .active .content {
+      max-height: 200px;
+    }
+  </style>
+
+  <ul>
+    <li class="item">
+      <button class="btn" onclick="f(0)">Guinness</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Recusandae, libero temporibus eius saepe ullam voluptatibus 
+          in consequatur cum maiores tempore dolore iste atque qui 
+          officiis velit labore doloribus sint. Dolor.
+        </p>
+      </div>
+    </li>
+    <li class="item">
+      <button class="btn" onclick="f(1)">Heineken</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Recusandae, libero temporibus eius saepe ullam voluptatibus 
+          in consequatur cum maiores tempore dolore iste atque qui 
+          officiis velit labore doloribus sint. 
+        </p>
+      </div>
+    </li>
+    <li class="item">
+      <button class="btn" onclick="f(2)">Budwiser</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        </p>
+      </div>
+    </li>
+  </ul>
 
 </body>
 </html>
