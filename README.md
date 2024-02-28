@@ -31,4 +31,7 @@ https://keumyebin0213.tistory.com/7
 <h3>HTML,CSS - 앨리먼트 폼 </h3>
 https://keumyebin0213.tistory.com/8
 
+<h3>자바스크립트 기초</h3>
+https://keumyebin0213.tistory.com/16
+
 
